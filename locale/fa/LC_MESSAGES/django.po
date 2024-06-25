@@ -1,0 +1,483 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-24 20:48+0330\n"
+"PO-Revision-Date: 2024-06-24 20:50+0000\n"
+"Last-Translator:   <plavigne19@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\rabani\settings.py:119
+msgid "English"
+msgstr "انگلیسی"
+
+#: .\rabani\settings.py:120
+msgid "Persian"
+msgstr "فارسی"
+
+#: .\rabani\settings.py:121
+msgid "Arabic"
+msgstr "عربی"
+
+#: .\website\models.py:8 .\website\models.py:54
+msgid "title"
+msgstr "عنوان"
+
+#: .\website\models.py:55
+msgid "text"
+msgstr "متن"
+
+#: .\website\models.py:75
+msgid "image"
+msgstr "تصویر"
+
+#: .\website\templates\about.html:4
+msgid "About Dr. Rabbani"
+msgstr "درباره دکتر حسین ربانی"
+
+#: .\website\templates\about.html:5
+msgid ""
+"Learn more about Dr. Hossein Rabbani DDS, a renowned cosmetic dentist. "
+"Discover his expertise in smile makeovers, teeth whitening, veneers, and his"
+" commitment to patient care."
+msgstr ""
+"در مورد دکتر حسین ربانی دندانپزشک زیبایی بیشتر بدانید. تخصص او در اصلاح "
+"لبخند، سفید کردن دندان، روکش و تعهد او به مراقبت از بیمار را کشف کنید."
+
+#: .\website\templates\about.html:15 .\website\templates\base.html:48
+msgid "About"
+msgstr "درباره"
+
+#: .\website\templates\about.html:29
+msgid ""
+"Dr. Hossein Rabbani Khah is a distinguished cosmetic dentist who completed "
+"his dental studies at the prestigious Jondy Shahpour University of Ahvaz. "
+"With a deep passion for enhancing smiles, Dr. Rabbani Khah has dedicated his"
+" career to the art and science of cosmetic dentistry, with a particular "
+"focus on veneer composites. At the helm of Harp Dental Clinic, he leads a "
+"team committed to providing exceptional dental care. His expertise in veneer"
+" composites allows patients to achieve the perfect balance between "
+"aesthetics and functionality, ensuring that each smile is both beautiful and"
+" healthy. Dr. Rabbani Khah meticulous approach and dedication to his craft "
+"have established him as a trusted name in cosmetic dentistry."
+msgstr ""
+"دکتر حسین ربانی خواه دندانپزشک برجسته زیبایی است که تحصیلات خود را در رشته "
+"دندانپزشکی در دانشگاه معتبر جندی شاهپور اهواز به پایان رسانده است. دکتر "
+"ربانی خواه با اشتیاق عمیق به تقویت لبخند، حرفه خود را وقف هنر و علم "
+"دندانپزشکی زیبایی با تمرکز ویژه بر کامپوزیت های روکش کرده است. او در راس "
+"کلینیک دندانپزشکی هارپ، تیمی را رهبری می کند که متعهد به ارائه مراقبت های "
+"دندانپزشکی استثنایی هستند. تخصص او در کامپوزیت های روکش به بیماران این امکان"
+" را می دهد که به تعادل کامل بین زیبایی و عملکرد دست یابند و اطمینان حاصل شود"
+" که هر لبخند هم زیبا و هم سالم است."
+
+#: .\website\templates\appointment.html:4
+msgid "Appointment Dr. Rabbani"
+msgstr "رزرو نوبت با دکتر حسین ربانی"
+
+#: .\website\templates\appointment.html:5
+msgid ""
+"Book an appointment for a smile makeover, teeth whitening, veneers, and "
+"more."
+msgstr ""
+"یک نوبت ملاقات برای اصلاح لبخند، سفید کردن دندان، روکش و موارد دیگر رزرو "
+"کنید. رزرو نوبت با دکتر حسین ربانی دندانپزشک زیبایی."
+
+#: .\website\templates\appointment.html:14 .\website\templates\contact.html:14
+msgid "Contact Us"
+msgstr "ارتباط با ما"
+
+#: .\website\templates\appointment.html:29
+msgid "Review Your Information:"
+msgstr "اطلاعات نوبت شما:"
+
+#: .\website\templates\appointment.html:30
+msgid "Your Name:"
+msgstr "نام و نام خانوادگی:"
+
+#: .\website\templates\appointment.html:31
+msgid "Your Email:"
+msgstr "آدرس الکترونیک:"
+
+#: .\website\templates\appointment.html:32
+msgid "Appointment Day:"
+msgstr "تاریخ نوبت:"
+
+#: .\website\templates\appointment.html:33
+msgid "Appointment Time:"
+msgstr "زمان تقریبی نوبت:"
+
+#: .\website\templates\appointment.html:34
+msgid "Message:"
+msgstr "متن پیام:"
+
+#: .\website\templates\appointment.html:36
+msgid "Note:"
+msgstr "هشدار:"
+
+#: .\website\templates\appointment.html:36
+msgid ""
+"This appointment has NOT been set yet. We will contact you shortly via "
+"telephone to confirm your appointment."
+msgstr ""
+"این قرار هنوز تعیین نشده است. ما به زودی از طریق تلفن برای تایید قرار ملاقات"
+" با شما تماس خواهیم گرفت."
+
+#: .\website\templates\base.html:8
+msgid "Dr. Hossein Rabbani DDS"
+msgstr "دکتر حسین ربانی - دندان‌پزشک زیبایی"
+
+#: .\website\templates\base.html:9
+msgid ""
+"Experience superior dental care with Dr. Hossein Rabbani DDS, a leading "
+"cosmetic dentist. Specializing in smile makeovers, teeth whitening, veneers,"
+" and more. Transform your smile today!"
+msgstr ""
+"با دکتر حسین ربانی، دندانپزشک برجسته زیبایی، مراقبت های دندانی برتر را تجربه"
+" کنید. متخصص در اصلاح لبخند، سفید کردن دندان، روکش و موارد دیگر. لبخند خود "
+"را امروز متحول کنید!"
+
+#: .\website\templates\base.html:35
+msgid "text-align"
+msgstr "right"
+
+#: .\website\templates\base.html:39
+msgid "Dr. Rabbani"
+msgstr "حسین ربانی"
+
+#: .\website\templates\base.html:41
+msgid "Menu"
+msgstr "منو"
+
+#: .\website\templates\base.html:46
+msgid "Home"
+msgstr "خانه"
+
+#: .\website\templates\base.html:47 .\website\templates\courses.html:16
+msgid "Courses"
+msgstr "دوره‌های عملی"
+
+#: .\website\templates\base.html:50
+msgid "Contact"
+msgstr "ارتباط"
+
+#: .\website\templates\base.html:51 .\website\templates\base.html:119
+#: .\website\templates\base.html:160
+msgid "Make an Appointment"
+msgstr "درخواست نوبت"
+
+#: .\website\templates\base.html:68
+msgid "Social Media"
+msgstr "شبکه‌های اجتماعی"
+
+#: .\website\templates\base.html:81
+msgid "Office"
+msgstr "آدرس مطب"
+
+#: .\website\templates\base.html:84 .\website\templates\contact.html:43
+msgid ""
+"Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, "
+"Iran"
+msgstr ""
+"ایران، اهواز، خیابان پهلوان شرقی، مجتمع پزشکی جام‌جم، طبقه هشتم، واحد 1"
+
+#: .\website\templates\base.html:85 .\website\templates\contact.html:46
+msgid "+989033103516"
+msgstr "۰۹۰۳۳۱۰۳۵۱۶"
+
+#: .\website\templates\base.html:93
+msgid "Location"
+msgstr "لوکیشن"
+
+#: .\website\templates\base.html:129
+msgid "Full Name"
+msgstr "نام و نام خانوادگی"
+
+#: .\website\templates\base.html:133
+msgid "Email"
+msgstr "آدرس الکترونیک"
+
+#: .\website\templates\base.html:139
+msgid "Date"
+msgstr "تاریخ نوبت"
+
+#: .\website\templates\base.html:145
+msgid "Appointment Time"
+msgstr "زمان تقریبی نوبت"
+
+#: .\website\templates\base.html:146
+msgid "9 to 12"
+msgstr "۹ تا ۱۲ صبح"
+
+#: .\website\templates\base.html:147
+msgid "15 to 18"
+msgstr "۱۵ تا ۱۸ ظهر"
+
+#: .\website\templates\base.html:148
+msgid "18 to 21"
+msgstr "۱۸ تا ۲۱ شب"
+
+#: .\website\templates\base.html:157 .\website\templates\contact.html:67
+msgid "Message"
+msgstr "متن پیام"
+
+#: .\website\templates\contact.html:4
+msgid "Contact Dr. Rabbani"
+msgstr "ارتباط با ما"
+
+#: .\website\templates\contact.html:5
+msgid ""
+"Get in touch with Dr. Hossein Rabbani DDS, your trusted cosmetic dentist. "
+"Book an appointment for a smile makeover, teeth whitening, veneers, and "
+"more. Contact us today!"
+msgstr ""
+"با دکتر حسین ربانی دندانپزشک زیبایی مورد اعتماد خود در تماس باشید. یک قرار "
+"ملاقات برای اصلاح لبخند، سفید کردن دندان، روکش و موارد دیگر رزرو کنید. امروز"
+" با ما تماس بگیرید!"
+
+#: .\website\templates\contact.html:24
+msgid "Message Failed"
+msgstr "خطا در ارسال پیام"
+
+#: .\website\templates\contact.html:25
+msgid ""
+"We have already received your message! In case of emergency, use other "
+"approaches to send us your message."
+msgstr ""
+"ما قبلاً پیام شما را دریافت کرده ایم! در مواقع اضطراری، از روش های دیگر برای"
+" ارسال پیام خود برای ما استفاده کنید."
+
+#: .\website\templates\contact.html:29
+msgid "Thanks"
+msgstr "تشکر"
+
+#: .\website\templates\contact.html:30
+msgid "We received your email and will respond shortly"
+msgstr "ایمیل شما را دریافت کردیم و به زودی پاسخ خواهیم داد"
+
+#: .\website\templates\contact.html:38
+msgid "Contact Information"
+msgstr "اطلاعات تماس"
+
+#: .\website\templates\contact.html:43
+msgid "Address:"
+msgstr "آدرس:"
+
+#: .\website\templates\contact.html:46
+msgid "Phone:"
+msgstr "تماس:"
+
+#: .\website\templates\contact.html:49
+msgid "Email:"
+msgstr "آدرس الکترونیک"
+
+#: .\website\templates\contact.html:52 .\website\templates\contact.html:53
+msgid "Instagram"
+msgstr "اینستاگرام:"
+
+#: .\website\templates\contact.html:52
+msgid "Dr. Hossein Rabbani"
+msgstr "صفحه شخصی دکتر ربانی"
+
+#: .\website\templates\contact.html:53
+msgid "Harp Clinic"
+msgstr "صفحه کلینیک هارپ"
+
+#: .\website\templates\contact.html:56
+msgid "dir"
+msgstr "rtl"
+
+#: .\website\templates\contact.html:61
+msgid "Your Name"
+msgstr "نام و نام خانوادگی"
+
+#: .\website\templates\contact.html:64
+msgid "Your Email"
+msgstr "آدرس الکترونیک"
+
+#: .\website\templates\contact.html:70
+msgid "Send"
+msgstr "ارسال"
+
+#: .\website\templates\courses.html:4
+msgid "Courses Dr. Rabbani"
+msgstr "دوره‌های دندانپزشکی"
+
+#: .\website\templates\courses.html:5
+msgid ""
+"Learn more about Cosmetic Dentistry Courses held by Dr. Hossein Rabbani DDS,"
+" a renowned cosmetic dentist. Courses cover Composite Veneer Layering "
+"Technique."
+msgstr ""
+"درباره دوره های دندانپزشکی زیبایی که توسط دکتر حسین ربانی ، دندانپزشک معروف "
+"زیبایی برگزار می شود، بیشتر بدانید. دوره ها تکنیک لایه بندی ونیر کامپوزیت را"
+" پوشش می دهند."
+
+#: .\website\templates\home.html:34
+msgid "Where Art Meets Dentistry"
+msgstr "ادغام دندان پزشکی و هنر"
+
+#: .\website\templates\home.html:35
+msgid ""
+"With a blend of precision and artistic flair, we create smiles that are "
+"uniquely tailored to each patient."
+msgstr ""
+"با ترکیبی از دقت و استعداد هنری، ما لبخندهایی خلق می کنیم که به طور منحصر به"
+" فرد برای هر بیمار طراحی شده است."
+
+#: .\website\templates\home.html:36 .\website\templates\home.html:192
+msgid "Request Appointment"
+msgstr "درخواست نوبت"
+
+#: .\website\templates\home.html:37
+msgid "OR CALL (+98) 903-310-3516"
+msgstr "تماس بگیرید"
+
+#: .\website\templates\home.html:48
+msgid "Visit Online"
+msgstr "ویزیت آنلاین"
+
+#: .\website\templates\home.html:49
+msgid ""
+"We offer <strong>FREE</strong> virtual appointments for personalized medical"
+" advice and diagnostics."
+msgstr "ما قرارهای مجازی را برای مشاوره و تشخیص پزشکی شخصی ارائه می دهیم."
+
+#: .\website\templates\home.html:62
+msgid "Hands-on Courses"
+msgstr "دوره‌های عملی"
+
+#: .\website\templates\home.html:63
+msgid ""
+"Enroll in Dr. Rabani’s immersive hands-on courses and elevate your practice."
+" Learn the art of crafting stunning smiles from an expert."
+msgstr ""
+"در دوره های عملی همه جانبه دکتر ربانی ثبت نام کنید و عمل خود را ارتقا دهید. "
+"هنر ساختن لبخندهای خیره کننده را از یک متخصص بیاموزید."
+
+#: .\website\templates\home.html:64
+msgid "Learn More"
+msgstr "بیشتر بدانید"
+
+#: .\website\templates\home.html:75
+msgid "Our Service Keeps you Smile"
+msgstr "خدمات ما، لبخند شما"
+
+#: .\website\templates\home.html:85
+msgid "Teeth Whitening"
+msgstr "سفید کردن دندان"
+
+#: .\website\templates\home.html:86
+msgid ""
+"A cosmetic procedure that lightens the color of teeth, often using bleaching"
+" agents or whitening products."
+msgstr ""
+"یک عمل زیبایی که اغلب با استفاده از مواد یا محصولات سفید کننده رنگ دندان‌ها "
+"را روشن می کند."
+
+#: .\website\templates\home.html:96
+msgid "Cosmetic Dentistry"
+msgstr "دندانپزشکی زیبایی"
+
+#: .\website\templates\home.html:97
+msgid "Focuses on enhancing the appearance of teeth and gums."
+msgstr "بر بهبود ظاهر دندان‌ها و لثه‌ها تمرکز دارد."
+
+#: .\website\templates\home.html:107
+msgid "Composite Veneers"
+msgstr "کامپوزیت ونیر"
+
+#: .\website\templates\home.html:108
+msgid ""
+"Thin shells made of tooth-colored resin applied directly to teeth. Used to "
+"cover imperfections, improve shape, and enhance smile aesthetics."
+msgstr ""
+"پوسته های نازک ساخته شده از رزین همرنگ دندان به طور مستقیم روی دندان ها "
+"اعمال می شود. برای پوشاندن عیوب، بهبود شکل و زیبایی لبخند استفاده می شود"
+
+#: .\website\templates\home.html:118
+msgid "Smile Makeover"
+msgstr "اصلاح لبخند"
+
+#: .\website\templates\home.html:119
+msgid ""
+"A comprehensive approach combining cosmetic dentistry procedures to achieve "
+"desired smile transformation."
+msgstr ""
+"یک رویکرد جامع ترکیبی از روش های دندانپزشکی زیبایی برای دستیابی به تغییر شکل"
+" لبخند مطلوب"
+
+#: .\website\templates\home.html:131
+msgid "Hollywood Smile"
+msgstr "لبخند هالیوودی"
+
+#: .\website\templates\home.html:159
+msgid "With Dr.Rabani "
+msgstr "دوستان دکتر ربانی"
+
+#: .\website\templates\home.html:189
+msgid "SCHEDULE YOUR RESERVATION NOW!"
+msgstr "نوبتتان را الان رزرو کنید"
+
+#: .\website\templates\home.html:193
+msgid "CALL (+98) 903-310-3516"
+msgstr "تماس"
+
+#: .\website\templates\home.html:213
+msgid "Meet Me at Harp Clinic"
+msgstr "کلینیک هارپ"
+
+#: .\website\templates\home.html:214
+msgid "The clinic is located in Jaam-E-Jam complex at east Pahlavan street."
+msgstr "مطب در مجتمع جام جم در خیابان پهلوان شرقی واقع شده است"
+
+#: .\website\templates\home.html:221
+msgid "Well Experience Dentist"
+msgstr "دندان‌پزشک باتجربه"
+
+#: .\website\templates\home.html:222
+msgid ""
+"Our clinic boasts a team of dentists with extensive experience in delivering"
+" top-notch dental care."
+msgstr "دکتر حسین ربانی، دندان‌پزشک زیبایی با بیش از 100 کیس موفق"
+
+#: .\website\templates\home.html:230
+msgid "High Technology Facilities"
+msgstr "وسایل با بالاترین تکنولوژی"
+
+#: .\website\templates\home.html:231
+msgid ""
+"We utilize the latest dental technology to ensure precise diagnoses and "
+"effective treatments."
+msgstr ""
+"ما از آخرین تکنولوژی دندانپزشکی برای اطمینان از تشخیص دقیق و درمان های موثر "
+"استفاده می کنیم"
+
+#: .\website\templates\home.html:239
+msgid "Comfortable Clinic"
+msgstr "کلینیک با محیط آرام و راحت "
+
+#: .\website\templates\home.html:240
+msgid ""
+"Patients enjoy a relaxing atmosphere with comfortable amenities designed to "
+"ease dental anxiety."
+msgstr ""
+"بیماران از یک فضای آرام با امکانات راحت طراحی شده برای کاهش اضطراب دندان لذت"
+" می برند"
+
+#~ msgid "Porcelain Veneers"
+#~ msgstr "ونیر کامپوزیت"
+
+#~ msgid "CALL"
+#~ msgstr "تماس"
