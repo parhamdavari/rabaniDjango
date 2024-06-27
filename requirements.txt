@@ -4,7 +4,9 @@ charset-normalizer==3.3.2
 deprecation==2.1.0
 djangify==1.0.0
 Django==4.2.13
+django-email-verification==0.3.3
 django-parler==2.3
+django-rosetta==0.10.0
 idna==3.7
 packaging==24.1
 pillow==10.3.0
