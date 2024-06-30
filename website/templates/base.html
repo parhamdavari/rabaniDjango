@@ -5,6 +5,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% if GA_KEY %}
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id={{ GA_KEY }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ GA_KEY }}');
+    </script>
+    {% endif %}
     <title>{% block title %}{% trans 'Dr. Hossein Rabbani DDS' %} {% endblock %}</title>
     <meta name="description" content="{% block meta_description %} {% trans 'Experience superior dental care with Dr. Hossein Rabbani DDS, a leading cosmetic dentist. Specializing in smile makeovers, teeth whitening, veneers, and more. Transform your smile today!' %} {% endblock %}">
     <meta charset="utf-8">
@@ -41,7 +50,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" style="font-family: 'Noto Nastaliq Urdu';" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
+	      <a class="navbar-brand" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span>
 	      </button>
