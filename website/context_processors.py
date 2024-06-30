@@ -1,3 +1,6 @@
+from django.conf import settings
+from django.http import HttpRequest
+
 def load_global_var(request):
     dr_email = 'parham.davarii@gmail.com'
     dr_phone = '+989033103516'
@@ -13,3 +16,9 @@ def load_global_var(request):
             'clinic_instagram': clinic_instagram,
             'welcome_msg': welcome_msg,
             }
+ 
+def google_analytics(request: HttpRequest):
+ 
+    return {
+        'GA_KEY': settings.GOOGLE_ANALYTICS_KEY,
+    }

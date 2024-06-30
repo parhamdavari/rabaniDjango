@@ -80,6 +80,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'website.context_processors.load_global_var',
                 'django.template.context_processors.i18n',
+                'website.context_processors.google_analytics'
             ],
         },
     },
@@ -191,3 +192,5 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 SESSION_COOKIE_AGE = 300  # Expire session after 300 seconds or 5 minutes
+
+GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
