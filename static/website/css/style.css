@@ -7566,7 +7566,7 @@ h1, h2, h3, h4, h5,
         bottom: 0;
         content: '';
         background: #000;
-        opacity: .2; }
+        opacity: .3; }
       .owl-carousel.home-slider .slider-item .slider-text {
         color: #fff;
         height: 700px; }
@@ -7861,7 +7861,7 @@ h1, h2, h3, h4, h5,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f89fc', endColorstr='#00dc94', GradientType=1 ); }
   @media (min-width: 768px) {
     .about-wrap {
-      padding: 7% 25% 5% 10%; } }
+      padding: 7% 20% 5% 10%; } }
   .about-wrap .list-services {
     display: block;
     margin-bottom: 30px; }
