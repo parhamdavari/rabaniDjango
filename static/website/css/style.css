@@ -8522,7 +8522,7 @@ textarea.form-control {
     /* width: 100%; */
     max-width: 100%;
     height: auto !important; 
-    min-height: 550px;
+    min-height: 700px;
     white-space: normal;
 
     /* width: auto; */
