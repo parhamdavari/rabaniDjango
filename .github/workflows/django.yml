@@ -1,0 +1,36 @@
+name: Django CI 2
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+    
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+        
+    - name: Deploy to Production
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        environment: production
+        token: ${{ secrets.DEPLOY_TOKEN }}
+        script: |
+          source /home/ubuntu/rabanidir/venv/bin/activate
+          cd /home/ubuntu/rabanidir/rabaniDjango/
+          git pull origin prod
+          systemctl restart gunicorn
