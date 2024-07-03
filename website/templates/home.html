@@ -24,9 +24,21 @@
         </div>
       {% endif %}
     {% endfor %}
+      
+    <div dir="{% trans 'dir' %}" class="slider-item" style="background-image: url(' {% if LANGUAGE_CODE == 'fa' %}{% static 'website/images/bg_1_fa.jpg' %}{% else %}{% static 'website/images/bg_1.jpg' %}{% endif %} ');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+          <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'Hands-on Courses' %}</h1>
+            <p class="mb-4">{% trans 'Enroll in Dr. Rabani’s immersive hands-on courses and elevate your practice. Learn the art of crafting stunning smiles from an expert.' %}</p>
+            <p><a href="#" class="btn btn-secondary px-4 py-3" >{% trans 'Learn More' %}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_2.jpg' %} ');">
+    <div dir="{% trans 'dir' %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_2.jpg' %} ');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text align-items-center" data-scrollax-parent="true">
@@ -40,7 +52,7 @@
       </div>
     </div>
 
-    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_3.jpg' %} ');">
+    <div dir="{% trans 'dir' %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_3.jpg' %} ');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text align-items-center" data-scrollax-parent="true">
@@ -52,20 +64,9 @@
       </div>
     </div>
 
-    
+    <!-- "{% if LANGUAGE_CODE == 'fa' %}{% static 'website/images/bg_1.heic' %}{% else %}{% static 'website/images/bg_1.heic' %}{% endif %}" -->
 
-    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_1.heic' %} ');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row slider-text align-items-center" data-scrollax-parent="true">
-          <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'Hands-on Courses' %}</h1>
-            <p class="mb-4">{% trans 'Enroll in Dr. Rabani’s immersive hands-on courses and elevate your practice. Learn the art of crafting stunning smiles from an expert.' %}</p>
-            <p><a href="#" class="btn btn-secondary px-4 py-3" >{% trans 'Learn More' %}</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </section>
  
   <section class="ftco-section ftco-services">
@@ -123,6 +124,7 @@
       </div>
     </div>
   </section> 
+
 
   <section class="ftco-section testimony-section bg-light">
     <div class="container">
