@@ -8519,13 +8519,10 @@ textarea.form-control {
   display: block;
   position: relative; }
   .testimony-wrap .user-img {
-    /* width: 100%; */
-    max-width: 100%;
+    max-width: 60%;
     height: auto !important; 
     min-height: 700px;
     white-space: normal;
-
-    /* width: auto; */
     border-radius: 1%;
     position: relative;
     margin-top: -75px;
