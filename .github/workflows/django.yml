@@ -25,7 +25,7 @@ jobs:
 
       - name: SSH into Server and Deploy
         run: |
-          ssh -i $SSH_KEY_PATH user@host
+          ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
           "cd ${{ secrets.WORK_DIR }}
           git fetch origin prod
           git reset --hard origin/prod
