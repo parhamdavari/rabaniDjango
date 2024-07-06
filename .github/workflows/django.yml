@@ -25,7 +25,6 @@ jobs:
 
       - name: SSH into Server and Deploy
         run: |
-          cd ${{ github.workspace }}
-          ssh-keyscan -t rsa ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git pull origin main"
-          echo "Successfully pulled repo."
+          sshpass -p '${{ secrets.PSWD }}' ssh -v -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} <<'ENDSSH'
+          cd ${{ secrets.WORK_DIR }}
+          git pull
