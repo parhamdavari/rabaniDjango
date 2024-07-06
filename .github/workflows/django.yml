@@ -28,6 +28,5 @@ jobs:
           sshpass -p '${{ secrets.PSWD }}' ssh -v -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} <<'ENDSSH'
           cd ${{ secrets.WORK_DIR }}
           git stash
-          git fetch origin prod && \
-          git reset --hard origin/prod && \
-          ./scripts/deploy.sh"
+          git fetch origin prod
+          ./scripts/deploy.sh
