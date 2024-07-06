@@ -29,4 +29,5 @@ jobs:
           cd ${{ secrets.WORK_DIR }}
           git stash
           git pull origin prod
+          sudo git reset --hard origin/prod
           ./scripts/deploy.sh
