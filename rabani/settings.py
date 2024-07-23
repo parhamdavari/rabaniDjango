@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'website',
     'rosetta',
     'parler',
+    'blog',
+    'AccessControl',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +72,7 @@ ROOT_URLCONF = 'rabani.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'website', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -194,3 +196,6 @@ EMAIL_USE_SSL = False
 SESSION_COOKIE_AGE = 300  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
+
+LOGIN_REDIRECT_URL = 'blog'
+LOGOUT_REDIRECT_URL = 'blog'
