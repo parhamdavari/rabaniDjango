@@ -3,71 +3,30 @@
 {% load i18n %}
 {% block content %}
  
-  <section class="home-slider owl-carousel">
 
 
-    {% for image in slideshow_images %}
-      {% if image.is_active %}
-        <div class="slider-item" style="background-image: url('{{ image.image.url }}');">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center" data-scrollax-parent="true">
-              <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ image.title }}</h1>
-                <p class="mb-4">{{ image.text }}</p>
-                {% if image.has_btn %}
-                  <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="'{{ image.link }}'" target="_blank" class="btn btn-secondary px-4 py-3" style="border-radius: 0% !important;">More</a></p>
-                {% endif %}
-              </div>
-            </div>
-          </div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero section">
+
+    <!-- Image for desktops and larger screens -->
+    <img src="{% static 'website/images/hero-bg-desktop.jpg' %}" alt="" data-aos="fade-in" class="desktop">
+    <!-- Image for mobile and smaller screens -->
+    <img src="{% static 'website/images/hero-bg-mobile.png' %}" alt="" data-aos="fade-in" class="mobile">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-center justify-content-start" style="flex-direction: column;">
+        <div class="col-md-12 col-sm-12 ftco-animate">
+          <h2 class="text-center raleway-heading">{% trans "Today<br>Is the Day<br>To protect your Smile" %}</h2>
         </div>
-      {% endif %}
-    {% endfor %}
-      
-    <div dir="{% trans 'dir' %}" class="slider-item" style="background-image: url(' {% if LANGUAGE_CODE == 'fa' %}{% static 'website/images/bg_1_fa.jpg' %}{% else %}{% static 'website/images/bg_1.jpg' %}{% endif %} ');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row slider-text align-items-center" data-scrollax-parent="true">
-          <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'Hands-on Courses' %}</h1>
-            <p class="mb-4">{% trans 'Enroll in Dr. Rabani’s immersive hands-on courses and elevate your practice. Learn the art of crafting stunning smiles from an expert.' %}</p>
-            <p><a href="#" class="btn btn-secondary px-4 py-3" >{% trans 'Learn More' %}</a></p>
-          </div>
+        <div class="text-center">
+          <p><a href="#" class="btn btn-get-started px-4 py-3" data-toggle="modal" data-target="#modalRequest">{% trans "Book" %}</a></p>
+          <p><a href="tel:{{dr_phone}}" class="btn btn-outline-light" style="border-color:transparent;">{% trans 'or Call (+98) 903-310-3516' %}</a></p>
         </div>
       </div>
     </div>
 
-    <div dir="{% trans 'dir' %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_2.jpg' %} ');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row slider-text align-items-center" data-scrollax-parent="true">
-          <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans "Where Art Meets Dentistry" %}</h1>
-            <p class="mb-4">{% trans "With a blend of precision and artistic flair, we create smiles that are uniquely tailored to each patient." %}</p>
-            <p><a href="#" class="btn btn-primary px-4 py-3" data-toggle="modal" data-target="#modalRequest">{% trans "Request Appointment" %}</a></p>
-            <p><a href="tel:{{dr_phone}}" class="btn btn-outline-light" style="border-color:transparent;">{% trans 'OR CALL (+98) 903-310-3516' %}</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+  </section><!-- /Hero Section -->
 
-    <div dir="{% trans 'dir' %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_3.jpg' %} ');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row slider-text align-items-center" data-scrollax-parent="true">
-          <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'Visit Online' %}</h1>
-            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'We offer <strong>FREE</strong> virtual appointments for personalized medical advice and diagnostics.' %}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- "{% if LANGUAGE_CODE == 'fa' %}{% static 'website/images/bg_1.heic' %}{% else %}{% static 'website/images/bg_1.heic' %}{% endif %}" -->
-
-    
-  </section>
  
   <section class="ftco-section ftco-services">
     <div class="container">
@@ -78,6 +37,10 @@
       </div>
       <div class="row">
         <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="hexagon">
+            <div class="inner-border"></div>
+          </div>
+          
           <div class="media block-6 services d-block text-center">
             <div class="icon d-flex justify-content-center align-items-center">
               <span class="flaticon-tooth-1"></span>
@@ -245,6 +208,65 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="ftco-section testimony-section">
+    
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <h2>{% trans 'Your Smile,<br>Our Strength' %}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-slider owl-carousel">
+
+      <div dir="{% trans 'dir' %}" class="slider-item-gallery" style="background-image: url(' {% if LANGUAGE_CODE == 'fa' %}{% static 'website/images/bg_1_fa.jpg' %}{% else %}{% static 'website/images/bg_1_fa.jpg' %}{% endif %} ');">
+        <!-- <div class="overlay"></div> -->
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <!-- <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'Hands-on Courses' %}</h1>
+              <p class="mb-4">{% trans 'Enroll in Dr. Rabani’s immersive hands-on courses and elevate your practice. Learn the art of crafting stunning smiles from an expert.' %}</p>
+              <p><a href="#" class="btn btn-secondary px-4 py-3" >{% trans 'Learn More' %}</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div dir="{% trans 'dir' %}" class="slider-item-gallery" style="background-image: url(' {% static 'website/images/g1.jpg' %} ');">
+        <!-- <div class="overlay"></div> -->
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <!-- <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans "Where Art Meets Dentistry" %}</h1> -->
+              <!-- <p class="mb-4">{% trans "With a blend of precision and artistic flair, we create smiles that are uniquely tailored to each patient." %}</p>
+              <p><a href="#" class="btn btn-primary px-4 py-3" data-toggle="modal" data-target="#modalRequest">{% trans "Request Appointment" %}</a></p>
+              <p><a href="tel:{{dr_phone}}" class="btn btn-outline-light" style="border-color:transparent;">{% trans 'OR CALL (+98) 903-310-3516' %}</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div dir="{% trans 'dir' %}" class="slider-item-gallery" style="background-image: url(' {% static 'website/images/bg_3.jpg' %} ');">
+        <!-- <div class="overlay"></div> -->
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <!-- <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'Visit Online' %}</h1>
+              <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{% trans 'We offer <strong>FREE</strong> virtual appointments for personalized medical advice and diagnostics.' %}</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- "{% if LANGUAGE_CODE == 'fa' %}{% static 'website/images/bg_1.heic' %}{% else %}{% static 'website/images/bg_1.heic' %}{% endif %}" -->
+
     </div>
   </section>
 

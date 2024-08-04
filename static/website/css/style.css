@@ -1,3 +1,60 @@
+/* Fonts */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway.ttf') format('truetype');
+}
+
+:root {
+  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #28292b; /* Color for headings, subheadings and title throughout the website */
+  --heading-secondary-color: #3c4e68; 
+  --heading-hero-color: #dde8f3; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #9F8877; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --pallete-color-first: #3A4E6B;
+  --pallete-color-second: #9F8877;
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #9F8877; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #9F8877; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f6f6f6;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #4B5C72;
+  --default-color: #ffffff;
+  --heading-color: #dbebff;
+  --surface-color: #4B5C72;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7301,7 +7358,7 @@ h1, h2, h3, h4, h5,
   top: 20px;
   left: 0;
   right: 0;
-  z-index: 3; }
+  z-index: 999; }
   @media (min-width: 992px) {
     .ftco-navbar-light {
       padding: 15px 0; } }
@@ -7390,7 +7447,7 @@ h1, h2, h3, h4, h5,
     color: rgba(255, 255, 255, 0.5); }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: var(--pallete-color-1) !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -7406,7 +7463,7 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
     .ftco-navbar-light.scrolled .nav-item.active > a {
-      color: #2f89fc !important; }
+      color: var(--pallete-color-1) !important; }
     .ftco-navbar-light.scrolled .nav-item.cta > a {
       color: #fff !important;
       background: #2f89fc;
@@ -7444,8 +7501,8 @@ h1, h2, h3, h4, h5,
         padding-right: 0 !important; } }
     .ftco-navbar-light.scrolled .navbar-toggler {
       border: none;
-      color: rgba(0, 0, 0, 0.5) !important;
-      border-color: rgba(0, 0, 0, 0.5) !important;
+      color: var(--pallete-color-1) !important;
+      border-color: var(--pallete-color-1) !important;
       cursor: pointer;
       padding-right: 0;
       text-transform: uppercase;
@@ -7456,7 +7513,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 0.9rem !important;
       color: #000 !important; }
       .ftco-navbar-light.scrolled .nav-link.active {
-        color: #2f89fc !important; }
+        color: var(--pallete-color-second) !important; }
     .ftco-navbar-light.scrolled.awake {
       margin-top: 0px;
       -webkit-transition: .3s all ease-out;
@@ -7552,6 +7609,16 @@ h1, h2, h3, h4, h5,
   .owl-carousel.home-slider {
     z-index: 0;
     position: relative; }
+    .owl-carousel.home-slider .slider-item-gallery {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 700px;
+      position: relative; }
+      @media (max-width: 700px) {
+        .owl-carousel.home-slider .slider-item-gallery {
+          background-size: cover; } }
+
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
@@ -9383,4 +9450,202 @@ textarea.form-control {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  --background-color: #3c4e68;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --contrast-color: #ffffff;
+  --pallete-color-1: #9F8877;
+  color: var(--default-color);
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: var(--background-color);
+}
+
+.header .topbar {
+  background-color: var(--background-color);
+  height: 40px;
+  padding: 0;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.header .topbar .contact-info i {
+  font-style: normal;
+  color: var(--accent-color);
+}
+
+.header .topbar .contact-info i a,
+.header .topbar .contact-info i span {
+  padding-left: 5px;
+  color: var(--default-color);
+}
+
+@media (max-width: 575px) {
+
+  .header .topbar .contact-info i a,
+  .header .topbar .contact-info i span {
+    font-size: 13px;
+  }
+}
+
+.header .topbar .contact-info i a {
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.header .topbar .contact-info i a:hover {
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+
+.header .topbar .social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  line-height: 0;
+  transition: 0.3s;
+  margin-left: 20px;
+}
+
+.header .topbar .social-links a:hover {
+  color: var(--accent-color);
+}
+
+.header .branding {
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  min-height: 50px;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 130vh;
+  position: relative;
+  padding: 100px 0 200px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .text-center {
+  text-align: center !important;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 50px 0 50px 0;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.hero btnblock {
+  align-items: flex-end !important;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  /* background: color-mix(in srgb, var(--background-color), transparent 10%); */
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 48px;
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  color: var(--heading-hero-color);
+  font-family: var(--heading-font);
+}
+
+.hero p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: var(--heading-color);
+}
+
+.hero .btn-get-started {
+  color: var(--pallete-color-first);
+  background: var(--pallete-color-second);
+  font-weight: 650;
+  /* font-size: 15px; */
+  display: inline-block;
+  padding: 8px 30px;
+  margin: 30px 0 0 0;
+  text-transform: uppercase;
+  border: 2px solid color-mix(in srgb, var(--pallete-color-second), transparent 20%);
+  border-radius: 20px;
+  width: 35vh;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) !important;
+  transition: box-shadow 0.3s smooth;
+}
+
+.hero .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
 }
