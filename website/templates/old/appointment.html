@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Appointment Dr. Rabbani' %} {% endblock %}
+{% block meta_description %} {% trans 'Book an appointment for a smile makeover, teeth whitening, veneers, and more.' %}  {% endblock %}
+{% block content %}
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url({% static 'website/images/contact_3.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+          <div class="row slider-text align-items-end">
+            <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+              <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">{% trans 'Contact Us' %}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+    {% if appointment_name %}
+      <!-- {% if request.session.mail_sent %}
+        <center class="col-md-12 p-md-4">
+          <h2>Message Failed</h2>
+          <p>We have already received your message! In case of emergency, use other approaches to send us your message.</p>
+        </center>
+      {% else %} -->
+        <center class="col-md-12 p-md-4">
+            <h1>{% trans 'Review Your Information:' %}</h1>
+            <strong>{% trans 'Your Name:' %} </strong><p>{{appointment_name}}</p>
+            <strong>{% trans 'Your Email:' %} </strong><p>{{appointment_email}}</p>
+            <strong>{% trans 'Appointment Day:' %} </strong><p>{{appointment_date}}</p>
+            <strong>{% trans 'Appointment Time:' %} </strong><p>{{appointment_time}}</p>
+            <strong>{% trans 'Message:' %} </strong><p>{{appointment_message}}</p>
+            <br/>
+            <strong>{% trans 'Note:' %} </strong>{% trans 'This appointment has NOT been set yet. We will contact you shortly via telephone to confirm your appointment.' %}
+            <br/><br/>
+        </center>
+      {% endif %}
+    <!-- {% else %} -->
+    <!-- {% endif %} -->
+
+
+{% endblock %}
+
+
