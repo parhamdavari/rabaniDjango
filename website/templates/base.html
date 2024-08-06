@@ -79,12 +79,44 @@
 {% endblock %}
 
 
-<footer class="ftco-footer ftco-bg-dark ftco-section">
+<footer class="ftco-footer ftco-bg-dark ftco-section" style="padding-bottom: 0;">
     <div class="container">
       <div class="row mb-5">
+
+        <div class="col-md-4 mb-5">
+          <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">{% trans 'Connect' %}</h2>
+              <div class="block-23 mb-3">
+                <ul dir="{% trans 'dir' %}">  
+	                <li><span class="icon icon-map-marker"></span><span class="text">{% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}</span></li>
+	                <li><a href="tel:{{dr_phone}}"><span class="icon icon-phone"></span><span class="text"> {% trans '+989033103516' %} </span></a></li>
+	              </ul>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 pr-md-4 mb-5">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">{% trans 'Services' %}</h2>
+          </div>
+          <div class="block-23 mb-3">
+            <ul dir="{% trans 'dir' %}">  
+              <li><a href="tel:{{dr_phone}}"><span class="text">{% trans 'Hands-on Courses' %}</span></a></li>
+              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Smile Makeovers' %} </span></a></li>
+              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Veneers & Ceramic' %} </span></a></li>
+              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Restorative Dentistry' %} </span></a></li>
+            </ul>
+          </div>
+          <!-- <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7556283202666!2d48.678617775509565!3d31.338121274297905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc3df59f60eb783%3A0xff18af503b556ec4!2sJaam-e-Jam%20Medical%20Center!5e0!3m2!1sen!2s!4v1717858284595!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div> -->
+        </div>
+
+
         <div class="col-md-3">
           <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">{% trans 'Social Media' %}</h2>
+            <h2 class="ftco-heading-2 head-line">{% trans 'Social Media' %}</h2>
             <!-- <p>{{welcome_msg}}</p> -->
           </div>
           <ul class="ftco-footer-social list-unstyled float-md-left float-lft ">
@@ -92,33 +124,16 @@
             <li class="ftco-animate"><a href="{{dr_instagram}}"><span class="icon-instagram"></span></a></li>
           </ul>
         </div> 
-        <div class="col-md-2">
+        <!-- <div class="col-md-2">
           <div class="ftco-footer-widget mb-4 ml-md-5"></div>
-        </div>
-        <div class="col-md-3">
-          <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">{% trans 'Office' %}</h2>
-              <div class="block-23 mb-3">
-                <ul dir="{% trans 'dir' %}">  
-	                <li><span class="icon icon-map-marker"></span><span class="text">{% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}</span></li>
-	                <li><a href="tel:{{dr_phone}}"><span class="icon icon-phone"></span><span class="text"> {% trans '+989033103516' %} </span></a></li>
-	                <li><a href="mailto:{{dr_email}}"><span class="icon icon-envelope"></span><span class="text"> {{dr_email}} </span></a></li>
-	              </ul>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-4 pr-md-4">
-          <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">{% trans 'Location' %}</h2>
-          </div>
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7556283202666!2d48.678617775509565!3d31.338121274297905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc3df59f60eb783%3A0xff18af503b556ec4!2sJaam-e-Jam%20Medical%20Center!5e0!3m2!1sen!2s!4v1717858284595!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
+        </div> -->
+        
+        
         
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
+          <img src=" {% static 'website/images/logo-harp.png' %} " class="img-fluid mb-5" alt="">
           <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
         </div>
       </div>
