@@ -19,6 +19,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/iranyekan" rel="stylesheet">
 
@@ -36,6 +39,8 @@
     <link rel="stylesheet" href=" {% static 'website/css/bootstrap-datepicker.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/jquery.timepicker.css' %} ">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
     
     <link rel="stylesheet" href=" {% static 'website/css/flaticon.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/icomoon.css' %} ">
@@ -52,7 +57,7 @@
 	    <div class="container">
         <div class="row ml-1 mb-2" style="flex-direction: column;">
           <a class="navbar-brand" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
-          <sub style="color: var(--pallete-color-1);"><strong>Cosmetic Dentist</strong></sub>
+          <sub style="color: var(--pallete-color-second);"><strong>Cosmetic Dentist</strong></sub>
         </div>
 	      
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +67,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="home.html" class="nav-link">{% trans 'Home' %}</a></li>
 	          <li class="nav-item"><a href="courses.html" class="nav-link">{% trans 'Courses' %}</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">{% trans 'About' %}</a></li>
+	          <!-- <li class="nav-item"><a href="about.html" class="nav-link">{% trans 'About' %}</a></li> -->
 	          <!-- <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
 	          <li class="nav-item"><a href="contact.html" class="nav-link">{% trans 'Contact' %}</a></li>
 	          <li class="nav-item cta"><a href="#" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>{% trans 'Make an Appointment' %}</span></a></li>
@@ -188,10 +193,10 @@
 
           <div class="form-group">
             <!-- <label for="appointment_message" class="text-black">Message</label> -->
-            <textarea name="appointment-message"  id="appointment_message" class="form-control" cols="30" rows="10" placeholder="{% trans 'Message' %}"></textarea>
+            <textarea name="appointment-message"  id="appointment_message" class="form-control" cols="20" rows="4" placeholder="{% trans 'Message' %}"></textarea>
           </div>
-          <div class="form-group">
-            <input type="submit" value="{% trans 'Make an Appointment' %}" class="btn btn-primary">
+          <div class="form-group" style="text-align: center;">
+            <input type="submit" value="{% trans 'BOOK' %}" class="btn btn-form">
           </div>
         </form>
       </div>
@@ -214,8 +219,15 @@
 <script src=" {% static 'website/js/bootstrap-datepicker.js' %} "></script>
 <script src=" {% static 'website/js/jquery.timepicker.min.js' %} "></script>
 <script src=" {% static 'website/js/scrollax.min.js' %} "></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
 <script src=" {% static 'website/js/google-map.js' %} "></script>
+<script src=" {% static 'website/js/glightbox.js' %} "></script>
+<script src=" {% static 'website/js/glightbox.min.js' %} "></script>
 <script src=" {% static 'website/js/main.js' %} "></script>
   
 </body>
