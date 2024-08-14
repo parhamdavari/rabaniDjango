@@ -193,7 +193,7 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-SESSION_COOKIE_AGE = 300  # Expire session after 300 seconds or 5 minutes
+SESSION_COOKIE_AGE = 3000  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
 

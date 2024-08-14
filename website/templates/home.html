@@ -16,7 +16,7 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row align-items-center justify-content-start" style="flex-direction: column;">
         <div class="col-md-12 col-sm-12 ftco-animate">
-          <h2 class="text-center raleway-heading">{% trans "Today<br>Is the Day<br>To protect your Smile" %}</h2>
+          <h2 class="text-center raleway-heading"><span class="transparent-text">{% trans "Today" %}</span>{% trans "<br>Is the Day<br>To protect your " %}<span class="transparent-text">{% trans "Smile" %}</span></h2>
         </div>
         <div class="text-center">
           <p><a href="#" class="btn btn-get-started px-4 py-3" data-toggle="modal" data-target="#modalRequest">{% trans "Book" %}</a></p>
@@ -46,7 +46,7 @@
           <img src=" {% static 'website/images/about_1.png' %} " class="img-fluid" alt="">
         </div>
 
-        <div class="col-lg-6 order-1 order-lg-1 content mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 order-1 order-lg-1 content mt-4" style="direction: {% trans 'ltr' %};" data-aos="fade-up" data-aos-delay="200">
           <h4>{% trans 'Dr. Hossein Rabbani' %}</h4>
           <p> 
             {% trans 'Dr. Hossein Rabbani Khah is an esteemed cosmetic dentist who graduated from the renowned Jondy Shahpour University of Ahvaz. Driven by a passion for enhancing smiles, he has devoted his career to excelling in cosmetic dentistry, particularly in the area of veneer composites.' %}
@@ -72,7 +72,7 @@
 
     <div class="row justify-content-center mt-5 pb-5">
       <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-2"><strong>{% trans 'Our Services<br>Your Smile'  %}</strong></h2>
+        <h2 class="mb-2"><strong>{% trans 'Our Services <br>Your Smile'  %}</strong></h2>
       </div>
     </div>
 
@@ -279,7 +279,7 @@
         <div class="about-wrap">
           <div class="about-wrap" style="background-color: transparent; border: solid; border-color: #9f8877bd; border-width: 1px; border-radius: .5rem;">
             <div class="mb-5 ftco-animate">
-              <h2 class="mb-2" style="color: #fff; font-family: 'Raleway';"><strong>{% trans 'Harp Clinic' %}</strong></h2>
+              <h2 class="mb-2" style="color: #fff; font-family: var(--heading-font);"><strong>{% trans 'Harp Clinic' %}</strong></h2>
               <!-- <p>{% trans 'The clinic is located in Jaam-E-Jam complex at east Pahlavan street.' %}</p> -->
             </div>
             <div class="list-services d-flex ftco-animate">
@@ -321,7 +321,7 @@
       <div class="row justify-content-center mb-4 pb-3">
         <div class="col-md-7 text-center heading-section ftco-animate">
           <h2 class="mb-2"><strong>{% trans 'Your Smile<br>Our Solidity'  %}</strong></h2>
-          <p>{% trans 'Radiant Results: Showcasing Complete Smile Transformations' %}</p>
+          <!-- <p>{% trans 'Radiant Results: Showcasing Complete Smile Transformations' %}</p> -->
         </div>
       </div>
       <div class="row justify-content-center ftco-animate no-gutters">
@@ -354,7 +354,7 @@
                 </div>
           </div>
         </div>
-        <a href="{{dr_instagram}}" class="read-more mt-4"><span>More on Instagram</span><i class="bi bi-arrow-right"></i></a>
+        <a href="{{dr_instagram}}" class="read-more mt-4"><span>{% trans 'More' %}</span><i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </section>
