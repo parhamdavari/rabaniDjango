@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'website',
     'parler',
     # 'blog',
-    'AccessControl',
+    # 'AccessControl',
 ]
 
 MIDDLEWARE = [
