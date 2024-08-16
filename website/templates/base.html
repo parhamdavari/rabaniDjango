@@ -19,6 +19,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/iranyekan" rel="stylesheet">
 
@@ -36,6 +39,8 @@
     <link rel="stylesheet" href=" {% static 'website/css/bootstrap-datepicker.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/jquery.timepicker.css' %} ">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
     
     <link rel="stylesheet" href=" {% static 'website/css/flaticon.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/icomoon.css' %} ">
@@ -50,7 +55,11 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
+        <div class="row ml-1 mb-2" style="flex-direction: column;">
+          <a class="navbar-brand" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
+          <sub style="color: var(--pallete-color-second);"><strong>{% trans 'Cosmetic Dentist' %}</strong></sub>
+        </div>
+	      
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span>
 	      </button>
@@ -58,7 +67,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="home.html" class="nav-link">{% trans 'Home' %}</a></li>
 	          <li class="nav-item"><a href="courses.html" class="nav-link">{% trans 'Courses' %}</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">{% trans 'About' %}</a></li>
+	          <!-- <li class="nav-item"><a href="about.html" class="nav-link">{% trans 'About' %}</a></li> -->
 	          <!-- <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
 	          <li class="nav-item"><a href="contact.html" class="nav-link">{% trans 'Contact' %}</a></li>
 	          <li class="nav-item cta"><a href="#" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>{% trans 'Make an Appointment' %}</span></a></li>
@@ -75,12 +84,44 @@
 {% endblock %}
 
 
-<footer class="ftco-footer ftco-bg-dark ftco-section">
+<footer class="ftco-footer ftco-bg-dark ftco-section" style="padding-bottom: 0;">
     <div class="container">
       <div class="row mb-5">
+
+        <div class="col-md-4 mb-5">
+          <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">{% trans 'Connect' %}</h2>
+              <div class="block-23 mb-3">
+                <ul dir="{% trans 'dir' %}">  
+	                <li><span class="icon icon-map-marker"></span><span class="text">{% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}</span></li>
+	                <li><a href="tel:{{dr_phone}}"><span class="icon icon-phone"></span><span class="text"> {% trans '+989033103516' %} </span></a></li>
+	              </ul>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 pr-md-4 mb-5">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">{% trans 'Services' %}</h2>
+          </div>
+          <div class="block-23 mb-3">
+            <ul dir="{% trans 'dir' %}">  
+              <li><a href="tel:{{dr_phone}}"><span class="text">{% trans 'Hands-on Courses' %}</span></a></li>
+              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Smile Makeovers' %} </span></a></li>
+              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Veneers & Ceramic' %} </span></a></li>
+              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Restorative Dentistry' %} </span></a></li>
+            </ul>
+          </div>
+          <!-- <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7556283202666!2d48.678617775509565!3d31.338121274297905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc3df59f60eb783%3A0xff18af503b556ec4!2sJaam-e-Jam%20Medical%20Center!5e0!3m2!1sen!2s!4v1717858284595!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div> -->
+        </div>
+
+
         <div class="col-md-3">
           <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">{% trans 'Social Media' %}</h2>
+            <h2 class="ftco-heading-2 head-line">{% trans 'Social Media' %}</h2>
             <!-- <p>{{welcome_msg}}</p> -->
           </div>
           <ul class="ftco-footer-social list-unstyled float-md-left float-lft ">
@@ -88,34 +129,18 @@
             <li class="ftco-animate"><a href="{{dr_instagram}}"><span class="icon-instagram"></span></a></li>
           </ul>
         </div> 
-        <div class="col-md-2">
+        <!-- <div class="col-md-2">
           <div class="ftco-footer-widget mb-4 ml-md-5"></div>
-        </div>
-        <div class="col-md-3">
-          <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">{% trans 'Office' %}</h2>
-              <div class="block-23 mb-3">
-                <ul dir="{% trans 'dir' %}">  
-	                <li><span class="icon icon-map-marker"></span><span class="text">{% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}</span></li>
-	                <li><a href="tel:{{dr_phone}}"><span class="icon icon-phone"></span><span class="text"> {% trans '+989033103516' %} </span></a></li>
-	                <li><a href="mailto:{{dr_email}}"><span class="icon icon-envelope"></span><span class="text"> {{dr_email}} </span></a></li>
-	              </ul>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-4 pr-md-4">
-          <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">{% trans 'Location' %}</h2>
-          </div>
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7556283202666!2d48.678617775509565!3d31.338121274297905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc3df59f60eb783%3A0xff18af503b556ec4!2sJaam-e-Jam%20Medical%20Center!5e0!3m2!1sen!2s!4v1717858284595!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
+        </div> -->
+        
+        
         
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+          <img src=" {% static 'website/images/logo-harp.png' %} " class="img-fluid mb-5" alt="">
+          <p>{% trans 'Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved' %}</p>
+          <!-- <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p> -->
         </div>
       </div>
     </div>
@@ -124,7 +149,7 @@
 
 
 <!-- loader -->
-<div dir="{% trans 'dir' %}" id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div dir="{% trans 'dir' %}" id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="var(--pallete-color-first)"/></svg></div>
 
 <!-- Modal -->
 <div dir="{% trans 'dir' %}" class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel" aria-hidden="true">
@@ -169,10 +194,10 @@
 
           <div class="form-group">
             <!-- <label for="appointment_message" class="text-black">Message</label> -->
-            <textarea name="appointment-message"  id="appointment_message" class="form-control" cols="30" rows="10" placeholder="{% trans 'Message' %}"></textarea>
+            <textarea name="appointment-message"  id="appointment_message" class="form-control" cols="20" rows="4" placeholder="{% trans 'Message' %}"></textarea>
           </div>
-          <div class="form-group">
-            <input type="submit" value="{% trans 'Make an Appointment' %}" class="btn btn-primary">
+          <div class="form-group" style="text-align: center;">
+            <input type="submit" value="{% trans 'BOOK' %}" class="btn btn-form">
           </div>
         </form>
       </div>
@@ -195,8 +220,15 @@
 <script src=" {% static 'website/js/bootstrap-datepicker.js' %} "></script>
 <script src=" {% static 'website/js/jquery.timepicker.min.js' %} "></script>
 <script src=" {% static 'website/js/scrollax.min.js' %} "></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
 <script src=" {% static 'website/js/google-map.js' %} "></script>
+<script src=" {% static 'website/js/glightbox.js' %} "></script>
+<script src=" {% static 'website/js/glightbox.min.js' %} "></script>
 <script src=" {% static 'website/js/main.js' %} "></script>
   
 </body>

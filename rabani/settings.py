@@ -37,7 +37,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['5.34.194.162', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['188.121.123.56', 'www.drrabani.com', 'drrabani.com', '5.34.194.162', '192.168.236.142', '192.168.1.50', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'parler',
+    'blog',
+    'AccessControl',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +71,7 @@ ROOT_URLCONF = 'rabani.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'website', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -194,6 +196,9 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-SESSION_COOKIE_AGE = 300  # Expire session after 300 seconds or 5 minutes
+SESSION_COOKIE_AGE = 3000  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
+
+LOGIN_REDIRECT_URL = 'blog'
+LOGOUT_REDIRECT_URL = 'blog'
