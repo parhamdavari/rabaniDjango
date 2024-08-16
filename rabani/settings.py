@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'parler',
-    'blog',
+    # 'blog',
     'AccessControl',
 ]
 
@@ -200,5 +200,5 @@ SESSION_COOKIE_AGE = 3000  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
 
-LOGIN_REDIRECT_URL = 'blog'
-LOGOUT_REDIRECT_URL = 'blog'
+# LOGIN_REDIRECT_URL = 'blog'
+# LOGOUT_REDIRECT_URL = 'blog'
