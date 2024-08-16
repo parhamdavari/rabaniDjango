@@ -9,7 +9,7 @@ urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('website.urls')),
     path('auth/', include('django.contrib.auth.urls')),
-    path('auth/', include('AccessControl.urls')),
+    # path('auth/', include('AccessControl.urls')),
 )
 
 if settings.DEBUG:
