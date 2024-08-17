@@ -107,10 +107,10 @@
           </div>
           <div class="block-23 mb-3">
             <ul dir="{% trans 'dir' %}">  
-              <li><a href="tel:{{dr_phone}}"><span class="text">{% trans 'Hands-on Courses' %}</span></a></li>
-              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Smile Makeovers' %} </span></a></li>
-              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Veneers & Ceramic' %} </span></a></li>
-              <li><a href="tel:{{dr_phone}}"><span class="text"> {% trans 'Restorative Dentistry' %} </span></a></li>
+              <li><span class="text">{% trans 'Hands-on Courses' %}</span></li>
+              <li><span class="text"> {% trans 'Smile Makeovers' %} </span></li>
+              <li><span class="text"> {% trans 'Veneers & Ceramic' %} </span></li>
+              <li><span class="text"> {% trans 'Restorative Dentistry' %} </span></li>
             </ul>
           </div>
           <!-- <div class="map-container">
@@ -166,17 +166,17 @@
           {% csrf_token %}
           <div class="form-group">
             <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
-            <input type="text" class="form-control" name="appointment-name" id="appointment_name" placeholder="{% trans 'Full Name' %}">
+            <input id="field1" type="text" class="form-control" name="appointment-name" id="appointment_name" placeholder="{% trans 'Full Name' %}" required>
           </div>
           <div class="form-group">
             <!-- <label for="appointment_email" class="text-black">Email</label> -->
-            <input type="text" class="form-control" name="appointment-email" id="appointment_email" placeholder="{% trans 'Email' %}">
+            <input id="field2" type="email" class="form-control" name="appointment-email" id="appointment_email" placeholder="{% trans 'Email' %}" required>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <!-- <label for="appointment_date" class="text-black">Date</label> -->
-                <input type="text" class="form-control appointment_date" name="appointment-date" placeholder="{% trans 'Date' %}">
+                <input id="field3" type="date" class="form-control appointment_date" name="appointment-date" placeholder="{% trans 'Date' %}" required>
               </div>    
             </div>
             <div class="col-md-6">
@@ -197,14 +197,41 @@
             <textarea name="appointment-message"  id="appointment_message" class="form-control" cols="20" rows="4" placeholder="{% trans 'Message' %}"></textarea>
           </div>
           <div class="form-group" style="text-align: center;">
-            <input type="submit" value="{% trans 'BOOK' %}" class="btn btn-form">
+            <input id="submitButton" type="submit" value="{% trans 'BOOK' %}" class="btn btn-form disabled">
           </div>
         </form>
+        <div id="error-message" style="color: red;"></div>
       </div>
       
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('input', function() {
+      const field1 = document.getElementById('field1').value;
+      const email = document.getElementById('field2').value;
+      const field3 = document.getElementById('field3').value;
+      var errorMessage = document.getElementById('error-message');
+      const submitButton = document.getElementById('submitButton');
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!emailPattern.test(email)) {
+        errorMessage.textContent = "{% trans 'Please enter a valid email address.' %}"
+        event.preventDefault(); // Prevent form submission
+      } else {
+        errorMessage.textContent = ''; // Clear error message
+      }
+
+
+      if (field1 && email && field3) {
+          submitButton.classList.remove('disabled');
+      } else {
+          submitButton.classList.add('disabled');
+      }
+  });
+</script>
 
 <script src=" {% static 'website/js/jquery.min.js' %} "></script>
 <script src=" {% static 'website/js/jquery-migrate-3.0.1.min.js' %} "></script>

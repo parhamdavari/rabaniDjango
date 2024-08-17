@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 16:39+0330\n"
-"PO-Revision-Date: 2024-08-17 16:39+0000\n"
+"POT-Creation-Date: 2024-08-17 20:43+0330\n"
+"PO-Revision-Date: 2024-08-17 20:44+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -60,7 +60,7 @@ msgstr ""
 msgid "About"
 msgstr "درباره"
 
-#: .\website\templates\about.html:33 .\website\templates\home.html:290
+#: .\website\templates\about.html:33 .\website\templates\home.html:283
 msgid "Well Experience Dentist"
 msgstr "دندان‌پزشک باتجربه"
 
@@ -209,15 +209,15 @@ msgstr "خدمات"
 msgid "Hands-on Courses"
 msgstr "دوره‌های عملی"
 
-#: .\website\templates\base.html:111 .\website\templates\home.html:113
+#: .\website\templates\base.html:111 .\website\templates\home.html:106
 msgid "Smile Makeovers"
-msgstr "اصلاح لبخند"
+msgstr "لیفت لثه"
 
 #: .\website\templates\base.html:112
 msgid "Veneers & Ceramic"
 msgstr "کامپوزیت و سرامیک"
 
-#: .\website\templates\base.html:113 .\website\templates\home.html:101
+#: .\website\templates\base.html:113 .\website\templates\home.html:94
 msgid "Restorative Dentistry"
 msgstr "ترمیم دندان"
 
@@ -266,6 +266,10 @@ msgstr "متن پیام"
 #: .\website\templates\base.html:200
 msgid "BOOK"
 msgstr "درخواست نوبت"
+
+#: .\website\templates\base.html:221
+msgid "Please enter a valid email address."
+msgstr "آدرس ایمیل را صحیح وارد کنید."
 
 #: .\website\templates\contact.html:4
 msgid "Contact Dr. Rabbani"
@@ -321,11 +325,11 @@ msgstr "آدرس الکترونیک"
 msgid "Instagram"
 msgstr "اینستاگرام:"
 
-#: .\website\templates\contact.html:55 .\website\templates\home.html:50
+#: .\website\templates\contact.html:55 .\website\templates\home.html:43
 msgid "Dr. Hossein Rabbani"
 msgstr " حسین ربانی"
 
-#: .\website\templates\contact.html:56 .\website\templates\home.html:282
+#: .\website\templates\contact.html:56 .\website\templates\home.html:275
 msgid "Harp Clinic"
 msgstr "هارپ"
 
@@ -355,31 +359,32 @@ msgstr ""
 "زیبایی برگزار می شود، بیشتر بدانید. دوره ها تکنیک لایه بندی ونیر کامپوزیت را"
 " پوشش می دهند."
 
-#: .\website\templates\home.html:19
+#: .\website\templates\home.html:13
 msgid "Today"
 msgstr "امروز"
 
-#: .\website\templates\home.html:19
+#: .\website\templates\home.html:13
 msgid "<br>Is the Day<br>To protect your "
 msgstr "<br>یک روز زیبا <br>برای مراقبت از "
 
-#: .\website\templates\home.html:19
+#: .\website\templates\home.html:13
 msgid "Smile"
 msgstr "لبخند شماست"
 
-#: .\website\templates\home.html:22
+#: .\website\templates\home.html:16
 msgid "Book"
 msgstr "درخواست نوبت"
 
-#: .\website\templates\home.html:23
+#: .\website\templates\home.html:17
 msgid "or Call (+98) 903-310-3516"
 msgstr "تماس ۰۹۰۳۳۱۰۳۵۱۶"
 
-#: .\website\templates\home.html:49 .\website\templates\home.html:279
+#: .\website\templates\home.html:42 .\website\templates\home.html:74
+#: .\website\templates\home.html:272
 msgid "ltr"
 msgstr "rtl"
 
-#: .\website\templates\home.html:52
+#: .\website\templates\home.html:45
 msgid ""
 "Dr. Hossein Rabbani Khah is an esteemed cosmetic dentist who graduated from "
 "the renowned Jondy Shahpour University of Ahvaz. Driven by a passion for "
@@ -389,7 +394,7 @@ msgstr ""
 "دکتر حسین ربانی خواه دانش آموخته دانشگاه جندی شاهپور اهواز است. او از ابتدا "
 "تمرکز خود را بر حوزه دندانپزشکی زیبایی معطوف کرده است."
 
-#: .\website\templates\home.html:55
+#: .\website\templates\home.html:48
 msgid ""
 "His expertise in veneer composites ensures that patients achieve the ideal "
 "blend of aesthetics and functionality, guaranteeing that every smile is both"
@@ -401,111 +406,112 @@ msgstr ""
 "ترکیب‌ایده‌آل زیبایی و سلامت دست می‌یابند. دقت به جزئیات و تعهد به حرفه‌اش، "
 "او را به چهره‌ای معتبر در زمینه دندانپزشکی زیبایی تبدیل کرده است."
 
-#: .\website\templates\home.html:75
+#: .\website\templates\home.html:68
 msgid "Our Services <br>Your Smile"
 msgstr "خدمات ما<br> لبخند شما"
 
-#: .\website\templates\home.html:89
+#: .\website\templates\home.html:82
 msgid "Composite & Ceramic"
 msgstr "کامپوزیت و سرامیک"
 
-#: .\website\templates\home.html:91
+#: .\website\templates\home.html:84
 msgid ""
 "Composite veneers are quick, affordable resin shells applied to teeth, while"
 " ceramic veneers are durable, custom-made ceramic shells for a natural look."
 msgstr ""
-"درمان‌هایی نظیر ترمیم دندان‌های خلفی با مواد همرنگ، روکش تمام سرامیک "
-"کامپوزیت ونیر با تکنیک لیرینگ، لمینیت."
+"اصلاح لبخند بدون تراش آسیب زننده به دندان و با کمترین اماده‌سازی لازم برای "
+"اصلاح رنگ و فرم دندان‌ها."
 
-#: .\website\templates\home.html:103
+#: .\website\templates\home.html:96
 msgid ""
 "Procedures like fillings, crowns, bridges, and dentures to repair and "
 "replace teeth."
-msgstr "درمان‌هایی نظیر پرکردن، روکش، بریج و پروتز برای ترمیم دندان‌ها"
+msgstr ""
+"درمان‌هایی نظیر ترمیم دندان‌های خلفی با مواد همرنگ، روکش تمام سرامیک، اینلی،"
+" آنلی."
 
-#: .\website\templates\home.html:115
+#: .\website\templates\home.html:108
 msgid ""
 "A comprehensive approach combining cosmetic dentistry procedures to achieve "
 "desired smile transformation."
 msgstr ""
 "یک رویکرد جامع ترکیبی از روش های دندانپزشکی زیبایی برای دستیابی به تغییر شکل"
-" لبخند مطلوب"
+" لبخند مطلوب."
 
-#: .\website\templates\home.html:125
+#: .\website\templates\home.html:118
 msgid "Teeth Whitening"
 msgstr "بلیچینگ دندان"
 
-#: .\website\templates\home.html:127
+#: .\website\templates\home.html:120
 msgid ""
 "A cosmetic procedure that lightens the color of teeth, often using bleaching"
 " agents or whitening products."
 msgstr ""
-"محافظه کارترین درمان زیبایی که کمک میکند بدون آسیب و با کمترین هزینه دندان "
-"هایی سفید داشته باشید."
+"محافظه کارترین درمان زیبایی که کمک می‌کند بدون آسیب و با کمترین هزینه "
+"دندان‌هایی سفید داشته باشید."
 
-#: .\website\templates\home.html:148
+#: .\website\templates\home.html:141
 msgid "Your Smile..."
 msgstr "آدرس الکترونیک"
 
-#: .\website\templates\home.html:155
+#: .\website\templates\home.html:148
 msgid "Your Beautiful <br>Smile"
 msgstr "لبخند زیبا <br>شما"
 
-#: .\website\templates\home.html:156
+#: .\website\templates\home.html:149
 msgid "Transformative Perfection: Detailed Craftsmanship in Composite Veneers"
 msgstr "هنر دست در خلق جزئیات دندان‌های شما"
 
-#: .\website\templates\home.html:270
+#: .\website\templates\home.html:263
 msgid "Meet Me at <br>Harp"
 msgstr "کلینیک هارپ"
 
-#: .\website\templates\home.html:283
+#: .\website\templates\home.html:276
 msgid "The clinic is located in Jaam-E-Jam complex at east Pahlavan street."
 msgstr "مطب در مجتمع جام جم در خیابان پهلوان شرقی واقع شده است"
 
-#: .\website\templates\home.html:289
+#: .\website\templates\home.html:282 .\website\templates\home.html:291
+#: .\website\templates\home.html:300
 msgid "padding-left:"
 msgstr "padding-right:"
 
-#: .\website\templates\home.html:291
+#: .\website\templates\home.html:284
 msgid ""
 "Our clinic boasts a team of dentists with extensive experience in delivering"
 " top-notch dental care."
-msgstr "دکتر حسین ربانی، دندان‌پزشک زیبایی با بیش از 100 کیس موفق"
+msgstr "دکتر حسین ربانی، دندان‌پزشک زیبایی با بیش از ۱۰۰ کیس موفق."
 
-#: .\website\templates\home.html:299
+#: .\website\templates\home.html:292
 msgid "High Technology Facilities"
 msgstr "وسایل با بالاترین تکنولوژی"
 
-#: .\website\templates\home.html:300
+#: .\website\templates\home.html:293
 msgid ""
 "We utilize the latest dental technology to ensure precise diagnoses and "
 "effective treatments."
 msgstr ""
-"ما از آخرین تکنولوژی دندانپزشکی برای اطمینان از تشخیص دقیق و درمان های موثر "
-"استفاده می کنیم"
+"بهره‌گیری از تکنولوژی روز دندانپزشکی برای اطمینان از تشخیص دقیق و درمان‌ "
+"مؤثر."
 
-#: .\website\templates\home.html:308
+#: .\website\templates\home.html:301
 msgid "Comfortable Clinic"
 msgstr "کلینیک با محیط آرام و راحت "
 
-#: .\website\templates\home.html:309
+#: .\website\templates\home.html:302
 msgid ""
 "Patients enjoy a relaxing atmosphere with comfortable amenities designed to "
 "ease dental anxiety."
-msgstr ""
-"بیماران از یک فضای آرام با امکانات راحت طراحی شده برای کاهش اضطراب دندان لذت"
-" می برند"
+msgstr "استفاده از امکانات و فضای آرامش بخش برای کاهش اضطراب دندان‌پزشکی شما."
 
-#: .\website\templates\home.html:323
+#: .\website\templates\home.html:316
 msgid "Your Smile<br>Our Solidity"
 msgstr "لبخند شما <br>استحکام ما"
 
-#: .\website\templates\home.html:324
+#: .\website\templates\home.html:317
 msgid "Radiant Results: Showcasing Complete Smile Transformations"
 msgstr "نمایش تغییرات کامل لبخند"
 
-#: .\website\templates\home.html:357
+#: .\website\templates\home.html:350
 msgid "More"
 msgstr "بیشتر"
 
