@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-14 19:33+0330\n"
-"PO-Revision-Date: 2024-08-14 19:34+0000\n"
+"POT-Creation-Date: 2024-08-17 16:39+0330\n"
+"PO-Revision-Date: 2024-08-17 16:39+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -219,7 +219,7 @@ msgstr "کامپوزیت و سرامیک"
 
 #: .\website\templates\base.html:113 .\website\templates\home.html:101
 msgid "Restorative Dentistry"
-msgstr "دندانپزشکی ترمیمی"
+msgstr "ترمیم دندان"
 
 #: .\website\templates\base.html:124
 msgid "Social Media"
@@ -360,7 +360,6 @@ msgid "Today"
 msgstr "امروز"
 
 #: .\website\templates\home.html:19
-#| msgid "Today<br>Is the Day<br>To protect your Smile"
 msgid "<br>Is the Day<br>To protect your "
 msgstr "<br>یک روز زیبا <br>برای مراقبت از "
 
@@ -376,7 +375,7 @@ msgstr "درخواست نوبت"
 msgid "or Call (+98) 903-310-3516"
 msgstr "تماس ۰۹۰۳۳۱۰۳۵۱۶"
 
-#: .\website\templates\home.html:49
+#: .\website\templates\home.html:49 .\website\templates\home.html:279
 msgid "ltr"
 msgstr "rtl"
 
@@ -415,8 +414,8 @@ msgid ""
 "Composite veneers are quick, affordable resin shells applied to teeth, while"
 " ceramic veneers are durable, custom-made ceramic shells for a natural look."
 msgstr ""
-"روکش‌های کامپوزیت پوسته‌های رزینی سریع و مقرون به صرفه‌ای هستند که بر "
-"دندان‌ها قرار می‌گیرند، در حالی که سرامیک دوام بالاتری دارد"
+"درمان‌هایی نظیر ترمیم دندان‌های خلفی با مواد همرنگ، روکش تمام سرامیک "
+"کامپوزیت ونیر با تکنیک لیرینگ، لمینیت."
 
 #: .\website\templates\home.html:103
 msgid ""
@@ -434,15 +433,15 @@ msgstr ""
 
 #: .\website\templates\home.html:125
 msgid "Teeth Whitening"
-msgstr "سفید کردن دندان"
+msgstr "بلیچینگ دندان"
 
 #: .\website\templates\home.html:127
 msgid ""
 "A cosmetic procedure that lightens the color of teeth, often using bleaching"
 " agents or whitening products."
 msgstr ""
-"یک عمل زیبایی که اغلب با استفاده از مواد یا محصولات سفید کننده رنگ دندان‌ها "
-"را روشن می کند"
+"محافظه کارترین درمان زیبایی که کمک میکند بدون آسیب و با کمترین هزینه دندان "
+"هایی سفید داشته باشید."
 
 #: .\website\templates\home.html:148
 msgid "Your Smile..."
@@ -463,6 +462,10 @@ msgstr "کلینیک هارپ"
 #: .\website\templates\home.html:283
 msgid "The clinic is located in Jaam-E-Jam complex at east Pahlavan street."
 msgstr "مطب در مجتمع جام جم در خیابان پهلوان شرقی واقع شده است"
+
+#: .\website\templates\home.html:289
+msgid "padding-left:"
+msgstr "padding-right:"
 
 #: .\website\templates\home.html:291
 msgid ""

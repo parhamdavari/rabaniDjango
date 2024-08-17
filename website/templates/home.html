@@ -7,12 +7,6 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero ftco-section">
-    
-    <!-- Image for desktops and larger screens -->
-    <img src="{% static 'website/images/hero-bg-desktop.jpg' %}" alt="" data-aos="fade-in" class="desktop">
-    <!-- Image for mobile and smaller screens -->
-    <img src="{% static 'website/images/hero-bg-mobile.png' %}" alt="" data-aos="fade-in" class="mobile">
-
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row align-items-center justify-content-start" style="flex-direction: column;">
         <div class="col-md-12 col-sm-12 ftco-animate">
@@ -24,7 +18,6 @@
         </div>
       </div>
     </div>
-
   </section><!-- /Hero Section -->
 
 
@@ -195,8 +188,8 @@
         <div class="col-lg-4 col-md-6 slider-element">
           <div id="slider-container-2" class="media block-6 d-block services slider-container position-relative">
             <div class="image-container">
-              <img class="img-before slider-image" src="{% static 'website/images/before-after/b1.jpeg' %}" alt="Before">
-              <img class="slider-image" src="{% static 'website/images/before-after/a1.jpeg' %}" alt="After">
+              <img class="img-before slider-image" src="{% static 'website/images/before-after/b2.jpg' %}" alt="Before">
+              <img class="slider-image" src="{% static 'website/images/before-after/a2.jpg' %}" alt="After">
             </div>
             <input
               id="slider-2"
@@ -225,8 +218,8 @@
         <div class="col-lg-4 col-md-6 slider-element mb-5">
           <div id="slider-container-3" class="media block-6 d-block services slider-container position-relative">
             <div class="image-container">
-              <img class="img-before slider-image" src="{% static 'website/images/before-after/b1.jpeg' %}" alt="Before">
-              <img class="slider-image" src="{% static 'website/images/before-after/a1.jpeg' %}" alt="After">
+              <img class="img-before slider-image" src="{% static 'website/images/before-after/b3.jpg' %}" alt="Before">
+              <img class="slider-image" src="{% static 'website/images/before-after/a3.jpg' %}" alt="After">
             </div>
             <input
               id="slider-3"
@@ -276,7 +269,7 @@
       <div class="col-md-6 img" style="background-image: url({% static 'website/images/clinic.jfif' %}); min-height:400px; background-size: cover;"></div>
       <div class="col-md-6 d-flex">
         
-        <div class="about-wrap">
+        <div class="about-wrap" style="direction: {% trans 'ltr' %};">
           <div class="about-wrap" style="background-color: transparent; border: solid; border-color: #9f8877bd; border-width: 1px; border-radius: .5rem;">
             <div class="mb-5 ftco-animate">
               <h2 class="mb-2" style="color: #fff; font-family: var(--heading-font);"><strong>{% trans 'Harp Clinic' %}</strong></h2>
@@ -286,7 +279,7 @@
               <div class="icon d-flex justify-content-center align-items-center">
                 <span class="icon-check2"></span>
               </div>
-              <div class="text">
+              <div class="text" style="{% trans 'padding-left:' %} 30px;">
                 <h3>{% trans 'Well Experience Dentist' %}</h3>
                 <p>{% trans 'Our clinic boasts a team of dentists with extensive experience in delivering top-notch dental care.' %}</p>
               </div>
@@ -295,7 +288,7 @@
               <div class="icon d-flex justify-content-center align-items-center">
                 <span class="icon-check2"></span>
               </div>
-              <div class="text">
+              <div class="text" style="{% trans 'padding-left:' %} 30px;">
                 <h3>{% trans 'High Technology Facilities' %}</h3>
                 <p>{% trans 'We utilize the latest dental technology to ensure precise diagnoses and effective treatments.' %}</p>
               </div>
@@ -304,7 +297,7 @@
               <div class="icon d-flex justify-content-center align-items-center">
                 <span class="icon-check2"></span>
               </div>
-              <div class="text">
+              <div class="text" style="{% trans 'padding-left:' %} 30px;">
                 <h3>{% trans 'Comfortable Clinic' %}</h3>
                 <p>{% trans 'Patients enjoy a relaxing atmosphere with comfortable amenities designed to ease dental anxiety.' %}</p>
               </div>
