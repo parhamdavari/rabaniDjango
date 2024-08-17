@@ -200,7 +200,6 @@
             <input id="submitButton" type="submit" value="{% trans 'BOOK' %}" class="btn btn-form disabled">
           </div>
         </form>
-        <div id="error-message" style="color: red;"></div>
       </div>
       
     </div>
@@ -214,16 +213,6 @@
       const field3 = document.getElementById('field3').value;
       var errorMessage = document.getElementById('error-message');
       const submitButton = document.getElementById('submitButton');
-
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      
-      if (!emailPattern.test(email)) {
-        errorMessage.textContent = "{% trans 'Please enter a valid email address.' %}"
-        event.preventDefault(); // Prevent form submission
-      } else {
-        errorMessage.textContent = ''; // Clear error message
-      }
-
 
       if (field1 && email && field3) {
           submitButton.classList.remove('disabled');
