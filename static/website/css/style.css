@@ -2084,8 +2084,20 @@ fieldset:disabled a.btn {
 
 .btn-form {
   color: #fafafa;
-  background-color: var(--pallete-color-first);
-  border-color: var(--pallete-color-second); }
+  background-color: var(--pallete-color-second);
+  border-color: var(--pallete-color-second); 
+  line-height: 200%;
+  width: 25vh;  
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-form:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) !important;  
+}
   .btn-primary:hover {
     color: #212529;
     background-color: var(--pallete-color-second);
@@ -4498,7 +4510,7 @@ button.close {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: #fafafa;
   background-clip: padding-box;
   border: 10px solid var(--pallete-color-first);
   border-radius: 1.5rem;
@@ -7989,7 +8001,7 @@ h1, h2, h3, h4, h5,
     display: block;
     margin-bottom: 30px; }
     .about-wrap .list-services .icon {
-      /* margin-top: 20px; */
+      margin-top: 20px;
       width: 60px;
       height: 60px;
       -moz-transition: all 0.3s ease;
