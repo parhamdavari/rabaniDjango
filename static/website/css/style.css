@@ -197,7 +197,7 @@ sup {
   vertical-align: baseline; }
 
 sub {
-  bottom: -.25em; }
+  bottom: -.5em; }
 
 sup {
   top: -.5em; }
@@ -7989,7 +7989,7 @@ h1, h2, h3, h4, h5,
     display: block;
     margin-bottom: 30px; }
     .about-wrap .list-services .icon {
-      margin-top: 20px;
+      /* margin-top: 20px; */
       width: 60px;
       height: 60px;
       -moz-transition: all 0.3s ease;
@@ -8023,8 +8023,7 @@ h1, h2, h3, h4, h5,
         color: #fff;
         font-size: 30px; }
     .about-wrap .list-services .text {
-      width: calc(100% - 60px);
-      padding-left: 40px; }
+      width: calc(100% - 60px);}
       .about-wrap .list-services .text h3 {
         font-size: 20px;
         color: #fff; }
@@ -9742,11 +9741,22 @@ textarea.form-control {
 
 .hero:before {
   content: "";
-  /* background: color-mix(in srgb, var(--background-color), transparent 10%); */
+  background-image: url('../images/hero-bg-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   position: absolute;
   inset: 0;
   z-index: 2;
 }
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+  .hero:before {
+    background-image: url('../images/hero-bg-desktop.png');
+  }
+}
+
 
 .hero .container {
   position: relative;
