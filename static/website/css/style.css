@@ -9771,12 +9771,24 @@ textarea.form-control {
   z-index: 2;
 }
 
-/* Media query for desktop screens */
+@supports (background-image: url('../images/hero-bg-mobile.webp')) {
+  .hero:before {
+    background-image: url('../images/hero-bg-mobile.webp');
+  }
+}
+
 @media (min-width: 768px) {
   .hero:before {
     background-image: url('../images/hero-bg-desktop.png');
   }
+
+  @supports (background-image: url('../images/hero-bg-desktop.webp')) {
+    .hero:before {
+      background-image: url('../images/hero-bg-desktop.webp');
+    }
+  }
 }
+
 
 
 .hero .container {
