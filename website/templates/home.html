@@ -36,7 +36,7 @@
       <div class="row gy-4 d-flex justify-content-center align-items-center" style="padding-right: 1rem; padding-left: 1rem;">
 
         <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-          <img src=" {% static 'website/images/about_1.png' %} " class="img-fluid" alt="">
+          <img data-src=" {% static 'website/images/about_1.png' %} " class="img-fluid lazy" alt="">
         </div>
 
         <div class="col-lg-6 order-1 order-lg-1 content mt-4" style="direction: {% trans 'ltr' %};" data-aos="fade-up" data-aos-delay="200">
@@ -155,8 +155,8 @@
         <div class="col-lg-4 col-md-6 slider-element">
           <div id="slider-container-1" class="media block-6 d-block services slider-container position-relative">
             <div class="image-container">
-              <img class="img-before slider-image" src="{% static 'website/images/before-after/b1.jpeg' %}" alt="Before">
-              <img class="slider-image" src="{% static 'website/images/before-after/a1.jpeg' %}" alt="After">
+              <img class="img-before slider-image lazy" data-src="{% static 'website/images/before-after/b1.jpeg' %}" alt="Before">
+              <img class="slider-image lazy" data-src="{% static 'website/images/before-after/a1.jpeg' %}" alt="After">
             </div>
             <input 
               id="slider-1"
@@ -188,8 +188,8 @@
         <div class="col-lg-4 col-md-6 slider-element">
           <div id="slider-container-2" class="media block-6 d-block services slider-container position-relative">
             <div class="image-container">
-              <img class="img-before slider-image" src="{% static 'website/images/before-after/b2.jpg' %}" alt="Before">
-              <img class="slider-image" src="{% static 'website/images/before-after/a2.jpg' %}" alt="After">
+              <img class="img-before slider-image lazy" data-src="{% static 'website/images/before-after/b2.jpg' %}" alt="Before">
+              <img class="slider-image lazy" data-src="{% static 'website/images/before-after/a2.jpg' %}" alt="After">
             </div>
             <input
               id="slider-2"
@@ -218,8 +218,8 @@
         <div class="col-lg-4 col-md-6 slider-element mb-5">
           <div id="slider-container-3" class="media block-6 d-block services slider-container position-relative">
             <div class="image-container">
-              <img class="img-before slider-image" src="{% static 'website/images/before-after/b3.jpg' %}" alt="Before">
-              <img class="slider-image" src="{% static 'website/images/before-after/a3.jpg' %}" alt="After">
+              <img class="img-before slider-image lazy" data-src="{% static 'website/images/before-after/b3.jpg' %}" alt="Before">
+              <img class="slider-image lazy" data-src="{% static 'website/images/before-after/a3.jpg' %}" alt="After">
             </div>
             <input
               id="slider-3"
@@ -322,27 +322,27 @@
           <div class="carousel-testimony owl-carousel ftco-owl">
                 <div class="item">
                   <div class="testimony-wrap">
-                    <div class="user-img mb-1" style="background-image: url({% static 'website/images/gallery/1.jpg' %});"></div>
+                    <div class="user-img mb-1 lazy-bg" data-bg="{% static 'website/images/gallery/1.jpg' %}"></div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="testimony-wrap">
-                    <div class="user-img mb-1" style="background-image: url({% static 'website/images/gallery/2.jpeg' %});"></div>
+                    <div class="user-img mb-1 lazy-bg" data-bg="{% static 'website/images/gallery/2.jpeg' %}"></div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="testimony-wrap">
-                    <div class="user-img mb-1" style="background-image: url({% static 'website/images/gallery/3.jpg' %});"></div>
+                    <div class="user-img mb-1 lazy-bg" data-bg="{% static 'website/images/gallery/3.jpg' %}"></div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="testimony-wrap">
-                    <div class="user-img mb-1" style="background-image: url({% static 'website/images/gallery/4.jpg' %});"></div>
+                    <div class="user-img mb-1 lazy-bg" data-bg="{% static 'website/images/gallery/4.jpg' %}"></div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="testimony-wrap">
-                    <div class="user-img mb-1" style="background-image: url({% static 'website/images/gallery/5.jpg' %});"></div>
+                    <div class="user-img mb-1 lazy-bg" data-bg="{% static 'website/images/gallery/5.jpg' %}"></div>
                   </div>
                 </div>
           </div>

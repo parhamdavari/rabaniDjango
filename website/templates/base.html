@@ -3,7 +3,7 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="{% trans 'en' %}">
   <head>
     {% if GA_KEY %}
       <script async="" src="https://www.googletagmanager.com/gtag/js?id={{ GA_KEY }}"></script>
@@ -176,7 +176,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <!-- <label for="appointment_date" class="text-black">Date</label> -->
-                <input id="field3" type="date" class="form-control appointment_date" name="appointment-date" placeholder="{% trans 'Date' %}" required>
+                <input id="field3" type="text" class="form-control appointment_date" name="appointment-date" placeholder="{% trans 'Date' %}" required>
               </div>    
             </div>
             <div class="col-md-6">
@@ -234,7 +234,7 @@
 <script src=" {% static 'website/js/aos.js' %} "></script>
 <script src=" {% static 'website/js/jquery.animateNumber.min.js' %} "></script>
 <script src=" {% static 'website/js/bootstrap-datepicker.js' %} "></script>
-<script src=" {% static 'website/js/jquery.timepicker.min.js' %} "></script>
+<!-- <script src=" {% static 'website/js/jquery.timepicker.min.js' %} "></script> -->
 <script src=" {% static 'website/js/scrollax.min.js' %} "></script>
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -242,9 +242,10 @@
 
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
-<script src=" {% static 'website/js/google-map.js' %} "></script>
-<script src=" {% static 'website/js/glightbox.js' %} "></script>
+<!-- <script src=" {% static 'website/js/google-map.js' %} "></script> -->
+<!-- <script src=" {% static 'website/js/glightbox.js' %} "></script> -->
 <script src=" {% static 'website/js/glightbox.min.js' %} "></script>
+<script src=" {% static 'website/js/lazyload.js' %}"></script>
 <script src=" {% static 'website/js/main.js' %} "></script>
   
 </body>

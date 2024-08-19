@@ -461,6 +461,15 @@ mark,
   max-width: 100%;
   height: auto; }
 
+.lazy-bg {
+    background-image: none;
+    transition: background-image 0.3s;
+}
+
+.lazy-bg-loaded {
+    background-image: url('');
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -9845,6 +9854,15 @@ textarea.form-control {
   /* width: 500px;
   height: 600px;
   object-fit: cover; */
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-loaded {
+  opacity: 1;
 }
 
 .slider-container {
