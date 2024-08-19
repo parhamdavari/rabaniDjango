@@ -3,6 +3,10 @@
   font-family: 'Raleway';
   src: url('../fonts/Raleway.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('../fonts/iranyekan/Qs_Iranyekan.ttf') format('truetype');
+}
 
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -90,16 +94,6 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
 
 
 html {
@@ -461,6 +455,15 @@ mark,
   max-width: 100%;
   height: auto; }
 
+.lazy-bg {
+    background-image: none;
+    transition: background-image 0.3s;
+}
+
+.lazy-bg-loaded {
+    background-image: url('');
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -479,43 +482,6 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #6c757d; }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-
-code {
-  font-size: 87.5%;
-  color: #e83e8c;
-  word-break: break-word; }
-  a > code {
-    color: inherit; }
-
-kbd {
-  padding: 0.2rem 0.4rem;
-  font-size: 87.5%;
-  color: #fff;
-  background-color: #212529;
-  border-radius: 0.2rem; }
-  kbd kbd {
-    padding: 0;
-    font-size: 100%;
-    font-weight: 700; }
-
-pre {
-  display: block;
-  font-size: 87.5%;
-  color: #212529; }
-  pre code {
-    font-size: inherit;
-    color: inherit;
-    word-break: normal; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
 
 .container {
   width: 100%;
@@ -9762,12 +9728,24 @@ textarea.form-control {
   z-index: 2;
 }
 
-/* Media query for desktop screens */
+@supports (background-image: url('../images/hero-bg-mobile.webp')) {
+  .hero:before {
+    background-image: url('../images/hero-bg-mobile.webp');
+  }
+}
+
 @media (min-width: 768px) {
   .hero:before {
     background-image: url('../images/hero-bg-desktop.png');
   }
+
+  @supports (background-image: url('../images/hero-bg-desktop.webp')) {
+    .hero:before {
+      background-image: url('../images/hero-bg-desktop.webp');
+    }
+  }
 }
+
 
 
 .hero .container {
@@ -9845,6 +9823,15 @@ textarea.form-control {
   /* width: 500px;
   height: 600px;
   object-fit: cover; */
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-loaded {
+  opacity: 1;
 }
 
 .slider-container {
