@@ -12,10 +12,8 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('rosetta/', include('rosetta.urls')),
-    path('blog/', include('blog.urls')),
     path('', include('website.urls')),
     path('auth/', include('django.contrib.auth.urls')),
-    path('auth/', include('AccessControl.urls')),
 )
 
 if settings.DEBUG:

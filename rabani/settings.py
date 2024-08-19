@@ -52,8 +52,6 @@ INSTALLED_APPS = [
     'website',
     'rosetta',
     'parler',
-    'blog',
-    'AccessControl',
 ]
 
 MIDDLEWARE = [
@@ -197,6 +195,3 @@ EMAIL_USE_SSL = False
 SESSION_COOKIE_AGE = 3000  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
-
-LOGIN_REDIRECT_URL = 'blog'
-LOGOUT_REDIRECT_URL = 'blog'
