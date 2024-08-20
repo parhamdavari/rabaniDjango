@@ -1,9 +1,5 @@
 /* Fonts */
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway.ttf') format('truetype');
-}
-@font-face {
   font-family: 'IRANYekan';
   src: url('../fonts/iranyekan/Qs_Iranyekan.ttf') format('truetype');
 }
@@ -14,8 +10,8 @@
 
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font-en: "Raleway",  sans-serif;
-  --heading-font-fa: 'IRANYekan', "Raleway",  sans-serif;
+  /* --heading-font-en: "Raleway",  sans-serif; */
+  --heading-font-fa: 'IRANYekan',  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
@@ -9768,9 +9764,9 @@ textarea.form-control {
   /* text-transform: uppercase; */
   font-weight: 700;
   color: var(--heading-hero-color);
-  font-family: var(--heading-font-en);
+  /* font-family: var(--heading-font-en); */
 }:lang(fa) {
-  font-family: var(--heading-font-fa) !important;}
+  font-family: var(--heading-font-fa);}
 
 .hero p {
   margin: 10px 0 0 0;
