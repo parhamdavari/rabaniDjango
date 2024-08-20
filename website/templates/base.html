@@ -14,14 +14,15 @@
         gtag('config', '{{ GA_KEY }}');
     </script>
     {% endif %}
+
     <title>{% block title %}{% trans 'Dr. Hossein Rabbani DDS' %} {% endblock %}</title>
     <meta name="description" content="{% block meta_description %} {% trans 'Experience superior dental care with Dr. Hossein Rabbani DDS, a leading cosmetic dentist. Specializing in smile makeovers, teeth whitening, veneers, and more. Transform your smile today!' %} {% endblock %}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet"> -->
-
-
+    <link rel="preload" href=" {% static 'website/css/style.css' %} " as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href=" {% static 'website/css/open-iconic-bootstrap.min.css' %} "  as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <link rel="stylesheet" href=" {% static 'website/css/open-iconic-bootstrap.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/animate.css' %} ">
     
@@ -34,29 +35,21 @@
     <link rel="stylesheet" href=" {% static 'website/css/ionicons.min.css' %} ">
 
     <link rel="stylesheet" href=" {% static 'website/css/bootstrap-datepicker.css' %} ">
-    <link rel="stylesheet" href=" {% static 'website/css/jquery.timepicker.css' %} ">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"> -->
     <link rel="stylesheet" href=" {% static 'website/css/glightbox.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/flickity.min.css' %} ">
-
     
     <link rel="stylesheet" href=" {% static 'website/css/flaticon.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/icomoon.css' %} ">
-    <link rel="stylesheet" href=" {% static 'website/css/style.css' %} ">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400&display=swap" rel="stylesheet"> -->
-
   </head>
+
   <body style="text-align: {% trans 'text-align' %};">
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
         <div class="row ml-1 mb-2" style="flex-direction: column;">
           <a class="navbar-brand" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
-          <sub style="color: var(--pallete-color-second); width: 85%;"><strong>{% trans 'Cosmetic Dentist' %}</strong></sub>
+          <sub style="color: #9F8877; width: 85%;"><strong>{% trans 'Cosmetic Dentist' %}</strong></sub>
         </div>
 	      
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">

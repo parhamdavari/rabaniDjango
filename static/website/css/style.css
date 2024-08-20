@@ -9787,7 +9787,7 @@ textarea.form-control {
   border-radius: 20px;
   width: 35vh;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) !important;
-  transition: box-shadow 0.3s smooth;
+  /* transition: box-shadow 0.3s smooth; */
 }
 
 .hero .btn-get-started:hover {
