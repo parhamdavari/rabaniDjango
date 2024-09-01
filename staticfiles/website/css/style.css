@@ -3,6 +3,14 @@
   font-family: 'Raleway';
   src: url('../fonts/Raleway.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('../fonts/iranyekan/Qs_Iranyekan.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+}
 
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -7374,18 +7382,21 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #dee2e6 !important; } }
 
 body {
-  font-family: 'IRANYekan', "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #fff;
   background: #fafafa;
   font-size: 15px;
   line-height: 1.8;
   font-weight: 400;
   color: gray; }
+  :lang(fa) {
+    font-family: 'IRANYekan', sans-serif;}
   body.menu-show {
     overflow: hidden;
     position: fixed;
     height: 100%;
-    width: 100%; }
+    width: 100%; 
+  }
 
 a {
   -webkit-transition: .3s all ease;

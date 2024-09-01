@@ -1,16 +1,17 @@
 /* Fonts */
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway.ttf') format('truetype');
-}
-@font-face {
   font-family: 'IRANYekan';
   src: url('../fonts/iranyekan/Qs_Iranyekan.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
 }
 
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: 'IRANYekan', "Raleway",  sans-serif;
+  /* --heading-font-en: "Raleway",  sans-serif; */
+  --heading-font-fa: 'IRANYekan',  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
@@ -97,12 +98,14 @@
 
 
 html {
-  font-family: 'IRANYekan',sans-serif;
+  font-family: 'Open Sans',sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  :lang(fa) {
+    font-family: 'IRANYekan', sans-serif;}
 
 @-ms-viewport {
   width: device-width; }
@@ -7340,13 +7343,15 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #dee2e6 !important; } }
 
 body {
-  font-family: 'IRANYekan', "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   background: #fff;
   background: #fafafa;
   font-size: 15px;
   line-height: 1.8;
   font-weight: 400;
   color: gray; }
+  :lang(fa) {
+    font-family: 'IRANYekan', sans-serif;}
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -9759,8 +9764,9 @@ textarea.form-control {
   /* text-transform: uppercase; */
   font-weight: 700;
   color: var(--heading-hero-color);
-  font-family: var(--heading-font);
-}
+  /* font-family: var(--heading-font-en); */
+}:lang(fa) {
+  font-family: var(--heading-font-fa);}
 
 .hero p {
   margin: 10px 0 0 0;
@@ -9781,7 +9787,7 @@ textarea.form-control {
   border-radius: 20px;
   width: 35vh;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) !important;
-  transition: box-shadow 0.3s smooth;
+  /* transition: box-shadow 0.3s smooth; */
 }
 
 .hero .btn-get-started:hover {

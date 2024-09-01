@@ -14,19 +14,15 @@
         gtag('config', '{{ GA_KEY }}');
     </script>
     {% endif %}
+
     <title>{% block title %}{% trans 'Dr. Hossein Rabbani DDS' %} {% endblock %}</title>
     <meta name="description" content="{% block meta_description %} {% trans 'Experience superior dental care with Dr. Hossein Rabbani DDS, a leading cosmetic dentist. Specializing in smile makeovers, teeth whitening, veneers, and more. Transform your smile today!' %} {% endblock %}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/iranyekan" rel="stylesheet">
-
-    <link rel="stylesheet" href=" {% static 'website/css/open-iconic-bootstrap.min.css' %} ">
-    <link rel="stylesheet" href=" {% static 'website/css/animate.css' %} ">
+    <link rel="preload" href=" {% static 'website/css/style.min.css' %} " as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href=" {% static 'website/css/open-iconic-bootstrap.min.css' %} "  as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href=" {% static 'website/css/animate.css' %} "  as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <link rel="stylesheet" href=" {% static 'website/css/owl.carousel.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/owl.theme.default.min.css' %} ">
@@ -37,31 +33,25 @@
     <link rel="stylesheet" href=" {% static 'website/css/ionicons.min.css' %} ">
 
     <link rel="stylesheet" href=" {% static 'website/css/bootstrap-datepicker.css' %} ">
-    <link rel="stylesheet" href=" {% static 'website/css/jquery.timepicker.css' %} ">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-
+    <link rel="stylesheet" href=" {% static 'website/css/glightbox.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'website/css/flickity.min.css' %} ">
     
     <link rel="stylesheet" href=" {% static 'website/css/flaticon.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/icomoon.css' %} ">
-    <link rel="stylesheet" href=" {% static 'website/css/style.css' %} ">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400&display=swap" rel="stylesheet">
-
   </head>
+
   <body style="text-align: {% trans 'text-align' %};">
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
         <div class="row ml-1 mb-2" style="flex-direction: column;">
           <a class="navbar-brand" href=" {% url 'home' %} "><span>{% trans 'Dr. Rabbani' %}</span></a>
-          <sub style="color: var(--pallete-color-second); width: 85%;"><strong>{% trans 'Cosmetic Dentist' %}</strong></sub>
+          <sub style="color: #9F8877; width: 85%;"><strong>{% trans 'Cosmetic Dentist' %}</strong></sub>
         </div>
 	      
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span>
+	        <span class="oi oi-menu" style="font-family: Icons !important;"></span>
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
@@ -222,6 +212,9 @@
   });
 </script>
 
+<!-- <link rel="preload" href="{% static 'website/js/main.min.js' %}" as="script"> -->
+<!-- <link rel="preload" href="{% static 'website/js/jquery.min.js' %}" as="script"> -->
+
 <script src=" {% static 'website/js/jquery.min.js' %} "></script>
 <script src=" {% static 'website/js/jquery-migrate-3.0.1.min.js' %} "></script>
 <script src=" {% static 'website/js/popper.min.js' %} "></script>
@@ -234,19 +227,13 @@
 <script src=" {% static 'website/js/aos.js' %} "></script>
 <script src=" {% static 'website/js/jquery.animateNumber.min.js' %} "></script>
 <script src=" {% static 'website/js/bootstrap-datepicker.js' %} "></script>
-<!-- <script src=" {% static 'website/js/jquery.timepicker.min.js' %} "></script> -->
 <script src=" {% static 'website/js/scrollax.min.js' %} "></script>
 
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+<script src=" {% static 'website/js/flickity.pkgd.min.js' %} "></script>
 
-
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
-<!-- <script src=" {% static 'website/js/google-map.js' %} "></script> -->
-<!-- <script src=" {% static 'website/js/glightbox.js' %} "></script> -->
 <script src=" {% static 'website/js/glightbox.min.js' %} "></script>
 <script src=" {% static 'website/js/lazyload.js' %}"></script>
-<script src=" {% static 'website/js/main.js' %} "></script>
+<script src=" {% static 'website/js/main.min.js' %} "></script>
   
 </body>
 </html>
