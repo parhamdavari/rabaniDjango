@@ -20,11 +20,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="preload" href=" {% static 'website/css/style.css' %} " as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href=" {% static 'website/css/style.min.css' %} " as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href=" {% static 'website/css/open-iconic-bootstrap.min.css' %} "  as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <link rel="stylesheet" href=" {% static 'website/css/open-iconic-bootstrap.min.css' %} ">
-    <link rel="stylesheet" href=" {% static 'website/css/animate.css' %} ">
+    <link rel="preload" href=" {% static 'website/css/animate.css' %} "  as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <link rel="stylesheet" href=" {% static 'website/css/owl.carousel.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'website/css/owl.theme.default.min.css' %} ">
@@ -214,6 +212,9 @@
   });
 </script>
 
+<!-- <link rel="preload" href="{% static 'website/js/main.min.js' %}" as="script"> -->
+<!-- <link rel="preload" href="{% static 'website/js/jquery.min.js' %}" as="script"> -->
+
 <script src=" {% static 'website/js/jquery.min.js' %} "></script>
 <script src=" {% static 'website/js/jquery-migrate-3.0.1.min.js' %} "></script>
 <script src=" {% static 'website/js/popper.min.js' %} "></script>
@@ -226,19 +227,13 @@
 <script src=" {% static 'website/js/aos.js' %} "></script>
 <script src=" {% static 'website/js/jquery.animateNumber.min.js' %} "></script>
 <script src=" {% static 'website/js/bootstrap-datepicker.js' %} "></script>
-<!-- <script src=" {% static 'website/js/jquery.timepicker.min.js' %} "></script> -->
 <script src=" {% static 'website/js/scrollax.min.js' %} "></script>
 
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+<script src=" {% static 'website/js/flickity.pkgd.min.js' %} "></script>
 
-
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
-<!-- <script src=" {% static 'website/js/google-map.js' %} "></script> -->
-<!-- <script src=" {% static 'website/js/glightbox.js' %} "></script> -->
 <script src=" {% static 'website/js/glightbox.min.js' %} "></script>
 <script src=" {% static 'website/js/lazyload.js' %}"></script>
-<script src=" {% static 'website/js/main.js' %} "></script>
+<script src=" {% static 'website/js/main.min.js' %} "></script>
   
 </body>
 </html>

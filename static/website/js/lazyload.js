@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
     let lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-bg"));
 
@@ -84,3 +83,4 @@ document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener("orientationchange", lazyLoadBackgrounds);
     }
 });
+
