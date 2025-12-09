@@ -42,8 +42,10 @@ OUTPUT_DIR = 'dist'
 CUSTOM_DOMAIN = 'drrabani.com'
 LANGUAGES = ['en', 'fa', 'ar']
 DEFAULT_LANGUAGE = 'en'
-# Base URL for GitHub Pages project site (empty string for custom domain or user site)
-BASE_URL = os.environ.get('BASE_URL', '/rabaniDjango')
+# Base URL for GitHub Pages project site (empty string for custom domain)
+# When using custom domain (drrabani.com), BASE_URL should be empty
+# When using github.io subdirectory, BASE_URL should be '/rabaniDjango'
+BASE_URL = os.environ.get('BASE_URL', '')
 
 
 def clean_output():
@@ -209,11 +211,11 @@ def create_github_pages_files():
     open(nojekyll_path, 'w').close()
     print('  Created .nojekyll')
 
-    # CNAME - custom domain (uncomment when domain is configured)
-    # cname_path = os.path.join(OUTPUT_DIR, 'CNAME')
-    # with open(cname_path, 'w') as f:
-    #     f.write(CUSTOM_DOMAIN)
-    # print(f'  Created CNAME ({CUSTOM_DOMAIN})')
+    # CNAME - custom domain
+    cname_path = os.path.join(OUTPUT_DIR, 'CNAME')
+    with open(cname_path, 'w') as f:
+        f.write(CUSTOM_DOMAIN)
+    print(f'  Created CNAME ({CUSTOM_DOMAIN})')
 
     # Root index.html - redirect to default language
     redirect_url = f'{BASE_URL}/{DEFAULT_LANGUAGE}/'
