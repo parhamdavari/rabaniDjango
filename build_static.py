@@ -79,15 +79,33 @@ def render_template(template_name, context, lang):
     return html
 
 
+def setup_database():
+    """Ensure database tables exist."""
+    from django.core.management import call_command
+    try:
+        # Run migrations to create tables
+        call_command('migrate', '--run-syncdb', verbosity=0)
+        print('Database ready.')
+    except Exception as e:
+        print(f'Database setup warning: {e}')
+
+
 def generate_pages():
     """Generate HTML pages for all languages."""
     base_context = get_base_context()
 
-    # Fetch database content once
-    slideshow_images = list(SlideShowImage.objects.all())
-    patient_images = list(PatientImage.objects.all())
-    gallery_images = list(GalleryImage.objects.all())
-    courses = list(Course.objects.all())
+    # Fetch database content once (may be empty in CI)
+    try:
+        slideshow_images = list(SlideShowImage.objects.all())
+        patient_images = list(PatientImage.objects.all())
+        gallery_images = list(GalleryImage.objects.all())
+        courses = list(Course.objects.all())
+    except Exception as e:
+        print(f'Warning: Could not fetch database content: {e}')
+        slideshow_images = []
+        patient_images = []
+        gallery_images = []
+        courses = []
 
     for lang in LANGUAGES:
         lang_dir = os.path.join(OUTPUT_DIR, lang)
@@ -297,7 +315,10 @@ def main():
     # Step 1: Clean output directory
     clean_output()
 
-    # Step 2: Generate pages for all languages
+    # Step 2: Setup database (run migrations)
+    setup_database()
+
+    # Step 3: Generate pages for all languages
     generate_pages()
 
     # Step 3: Copy static files

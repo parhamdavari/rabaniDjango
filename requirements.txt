@@ -12,10 +12,10 @@ click-repl==0.3.0
 colorama==0.4.6
 deprecation==2.1.0
 djangify==1.0.0
-Django
+Django>=4.2,<5.0
 django-email-verification==0.3.3
 django-environ==0.11.2
-django-google-analytics-app==6.0.0
+# django-google-analytics-app==6.0.0
 django-parler==2.3
 # django-rosetta==0.10.0
 django-versatileimagefield==3.1
