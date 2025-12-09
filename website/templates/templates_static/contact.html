@@ -1,0 +1,95 @@
+{% extends 'templates_static/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Contact Dr. Rabbani' %} {% endblock %}
+{% block meta_description %}{% trans 'Get in touch with Dr. Hossein Rabbani DDS, your trusted cosmetic dentist. Book an appointment for a smile makeover, teeth whitening, veneers, and more. Contact us today!' %} {% endblock %}
+{% block content %}
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url({% static 'website/images/contact_3.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+          <div class="row slider-text align-items-end">
+            <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+              <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">{% trans 'Contact Us' %}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success message for FormSubmit.co redirect -->
+    <div id="form-success" style="display:none;">
+      <center class="col-md-12 p-md-4">
+        <h2>{% trans 'Thanks' %}!</h2>
+        <p>{% trans 'We received your email and will respond shortly' %}</p>
+      </center>
+    </div>
+
+    <script>
+      // Check for success parameter from FormSubmit.co redirect
+      if (window.location.search.includes('success=true')) {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('form-success').style.display = 'block';
+          document.getElementById('contact-form-section').style.display = 'none';
+        });
+      }
+    </script>
+
+    <section id="contact-form-section" class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">{% trans 'Contact Information' %}</h2>
+          </div>
+          <div class="w-100"></div>
+
+          <div class="col-md-3">
+            <p><span>{% trans 'Address:' %} </span>{% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>{% trans 'Phone:' %} </span> <a href="tel:{{dr_phone}}">{% trans '+989033103516' %}</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>{% trans 'Email:' %} </span> <a href="mailto:{{dr_email}}">{{dr_email}}</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>{% trans 'Instagram' %}</span> <a href={{dr_instagram}}>{% trans 'Dr. Hossein Rabbani' %}</a></p>
+            <p><span>{% trans 'Instagram' %}</span> <a href={{clinic_instagram}}>{% trans 'Harp Clinic' %}</a></p>
+          </div>
+        </div>
+        <div dir="{% trans 'dir' %}" class="row block-9">
+            <div class="col-md-6 pr-md-5">
+              <!-- FormSubmit.co form for static site -->
+              <form action="https://formsubmit.co/parham.davarii@gmail.com" method="POST">
+                <!-- FormSubmit.co configuration -->
+                <input type="hidden" name="_subject" value="New Contact from Dr. Rabani Website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://drrabani.com/{{ LANGUAGE_CODE }}/contact.html?success=true">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="{% trans 'Your Name' %}" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="{% trans 'Your Email' %}" required>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="{% trans 'Message' %}" required></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="{% trans 'Send' %}" class="btn btn-primary py-3 px-5">
+                </div>
+              </form>
+
+            </div>
+
+            <div class="map-container col-md-6" id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7556283202666!2d48.678617775509565!3d31.338121274297905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc3df59f60eb783%3A0xff18af503b556ec4!2sJaam-e-Jam%20Medical%20Center!5e0!3m2!1sen!2s!4v1717858284595!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+{% endblock %}

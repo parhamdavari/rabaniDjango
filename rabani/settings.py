@@ -18,8 +18,12 @@ from django.utils.translation import gettext_lazy as _
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False)
+    DEBUG=(bool, False),
+    BUILD_STATIC=(bool, False)
 )
+
+# Static site build mode - when True, generates static HTML files
+BUILD_STATIC = env('BUILD_STATIC')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -194,3 +198,9 @@ EMAIL_USE_SSL = False
 SESSION_COOKIE_AGE = 300  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
+
+# Static site build output directory
+DISTILL_DIR = BASE_DIR / 'dist'
+
+# Static files root for collectstatic
+STATIC_ROOT = BASE_DIR / 'staticfiles'

@@ -1,0 +1,32 @@
+{% extends 'templates_static/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Appointment Dr. Rabbani' %} {% endblock %}
+{% block meta_description %} {% trans 'Book an appointment for a smile makeover, teeth whitening, veneers, and more.' %}  {% endblock %}
+{% block content %}
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url({% static 'website/images/contact_3.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+          <div class="row slider-text align-items-end">
+            <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+              <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">{% trans 'Appointment' %}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success message shown when redirected from FormSubmit.co -->
+    <center class="col-md-12 p-md-4">
+        <h1>{% trans 'Thank You!' %}</h1>
+        <br/>
+        <p>{% trans 'Your appointment request has been submitted successfully.' %}</p>
+        <br/>
+        <strong>{% trans 'Note:' %} </strong>{% trans 'This appointment has NOT been set yet. We will contact you shortly via telephone to confirm your appointment.' %}
+        <br/><br/>
+        <a href="home.html" class="btn btn-primary">{% trans 'Back to Home' %}</a>
+    </center>
+
+{% endblock %}
