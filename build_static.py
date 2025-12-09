@@ -206,11 +206,11 @@ def create_github_pages_files():
     open(nojekyll_path, 'w').close()
     print('  Created .nojekyll')
 
-    # CNAME - custom domain
-    cname_path = os.path.join(OUTPUT_DIR, 'CNAME')
-    with open(cname_path, 'w') as f:
-        f.write(CUSTOM_DOMAIN)
-    print(f'  Created CNAME ({CUSTOM_DOMAIN})')
+    # CNAME - custom domain (uncomment when domain is configured)
+    # cname_path = os.path.join(OUTPUT_DIR, 'CNAME')
+    # with open(cname_path, 'w') as f:
+    #     f.write(CUSTOM_DOMAIN)
+    # print(f'  Created CNAME ({CUSTOM_DOMAIN})')
 
     # Root index.html - redirect to default language
     redirect_html = f'''<!DOCTYPE html>
