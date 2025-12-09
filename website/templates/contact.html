@@ -102,16 +102,19 @@
               </div>
 
               <div class="contact-form__group">
-                <label for="contact-email" class="contact-form__label">{% trans 'Your Email' %}</label>
+                <label for="contact-phone" class="contact-form__label">{% trans 'Phone:' %}</label>
                 <input
-                  type="email"
-                  id="contact-email"
-                  name="message-email"
+                  type="tel"
+                  id="contact-phone"
+                  name="message-phone"
                   class="contact-form__input"
-                  placeholder="example@email.com"
+                  placeholder="09xxxxxxxxx"
+                  pattern="09[0-9]{9}"
+                  maxlength="11"
                   required
-                  autocomplete="email"
+                  autocomplete="tel"
                 >
+                <div id="contact-phone-error" class="invalid-feedback">{% trans 'Please enter a valid phone number (09xxxxxxxxx)' %}</div>
               </div>
 
               <div class="contact-form__group">
@@ -137,5 +140,38 @@
       </div>
     </section>
     {% endif %}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const phoneField = document.getElementById('contact-phone');
+        if (phoneField) {
+          const phoneRegex = /^09[0-9]{9}$/;
+
+          phoneField.addEventListener('input', function() {
+            const value = phoneField.value;
+            phoneField.value = value.replace(/[^0-9]/g, '');
+
+            if (value.length > 0) {
+              if (!value.startsWith('09')) {
+                phoneField.classList.add('is-invalid');
+                phoneField.classList.remove('is-valid');
+              } else if (value.length === 11 && phoneRegex.test(value)) {
+                phoneField.classList.remove('is-invalid');
+                phoneField.classList.add('is-valid');
+              } else if (value.length === 11) {
+                phoneField.classList.add('is-invalid');
+                phoneField.classList.remove('is-valid');
+              } else {
+                phoneField.classList.remove('is-invalid');
+                phoneField.classList.remove('is-valid');
+              }
+            } else {
+              phoneField.classList.remove('is-invalid');
+              phoneField.classList.remove('is-valid');
+            }
+          });
+        }
+      });
+    </script>
 
 {% endblock %}
