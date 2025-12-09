@@ -163,7 +163,8 @@
             <input id="field1" type="text" class="form-control" name="name" placeholder="{% trans 'Full Name' %}" required>
           </div>
           <div class="form-group">
-            <input id="field2" type="email" class="form-control" name="email" placeholder="{% trans 'Email' %}" required>
+            <input id="field2" type="tel" class="form-control" name="phone" placeholder="09xxxxxxxxx" pattern="09[0-9]{9}" maxlength="11" required>
+            <div id="phone-error" class="invalid-feedback">{% trans 'Please enter a valid phone number (09xxxxxxxxx)' %}</div>
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -173,8 +174,8 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <select class="form-control" name="time">
-                  <option value="Appointment Time">{% trans 'Appointment Time' %}</option>
+                <select class="form-control" name="time" required>
+                  <option value="">{% trans 'Appointment Time' %}</option>
                   <option value="9 AM to 12 PM">{% trans '9 to 12' %}</option>
                   <option value="15 PM to 18 PM">{% trans '15 to 18' %}</option>
                   <option value="18 PM to 21 PM">{% trans '18 to 21' %}</option>
@@ -216,6 +217,72 @@
 <script src="{{ BASE_URL }}/static/website/js/glightbox.min.js"></script>
 <script src="{{ BASE_URL }}/static/website/js/lazyload.js"></script>
 <script src="{{ BASE_URL }}/static/website/js/main.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const nameField = document.getElementById('field1');
+      const phoneField = document.getElementById('field2');
+      const dateField = document.getElementById('field3');
+      const timeField = document.querySelector('select[name="time"]');
+      const submitButton = document.getElementById('submitButton');
+
+      // Validate Iranian phone number (starts with 09, 11 digits)
+      const phoneRegex = /^09[0-9]{9}$/;
+
+      function validateForm() {
+          const isValidPhone = phoneRegex.test(phoneField.value);
+          const isValidName = nameField.value.trim() !== '';
+          const isValidDate = dateField.value.trim() !== '';
+          const isValidTime = timeField.value !== '';
+
+          if (isValidName && isValidPhone && isValidDate && isValidTime) {
+              submitButton.classList.remove('disabled');
+              submitButton.disabled = false;
+          } else {
+              submitButton.classList.add('disabled');
+              submitButton.disabled = true;
+          }
+      }
+
+      // Real-time phone validation
+      phoneField.addEventListener('input', function() {
+          const value = phoneField.value;
+
+          // Only allow digits
+          phoneField.value = value.replace(/[^0-9]/g, '');
+
+          if (value.length > 0) {
+              if (!value.startsWith('09')) {
+                  phoneField.classList.add('is-invalid');
+                  phoneField.classList.remove('is-valid');
+              } else if (value.length === 11 && phoneRegex.test(value)) {
+                  phoneField.classList.remove('is-invalid');
+                  phoneField.classList.add('is-valid');
+              } else if (value.length === 11) {
+                  phoneField.classList.add('is-invalid');
+                  phoneField.classList.remove('is-valid');
+              } else {
+                  phoneField.classList.remove('is-invalid');
+                  phoneField.classList.remove('is-valid');
+              }
+          } else {
+              phoneField.classList.remove('is-invalid');
+              phoneField.classList.remove('is-valid');
+          }
+
+          validateForm();
+      });
+
+      // Validate other fields
+      nameField.addEventListener('input', validateForm);
+      dateField.addEventListener('input', validateForm);
+      timeField.addEventListener('change', validateForm);
+
+      // Initial state
+      submitButton.classList.add('disabled');
+      submitButton.disabled = true;
+  });
+</script>
 
 </body>
 </html>

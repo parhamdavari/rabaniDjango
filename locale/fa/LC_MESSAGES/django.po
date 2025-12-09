@@ -240,6 +240,10 @@ msgstr "تمامی حقوق این وبسایت برای دکتر حسین رب�
 msgid "Full Name"
 msgstr "نام و نام خانوادگی"
 
+#: .\website\templates\base.html:175
+msgid "Please enter a valid phone number (09xxxxxxxxx)"
+msgstr "لطفاً شماره تلفن معتبر وارد کنید (۰۹xxxxxxxxx)"
+
 #: .\website\templates\base.html:172
 msgid "Email"
 msgstr "آدرس الکترونیک"
