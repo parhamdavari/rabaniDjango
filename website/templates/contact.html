@@ -1,88 +1,141 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+{% block body_class %}page-contact{% endblock %}
 {% block title %}{% trans 'Contact Dr. Rabbani' %} {% endblock %}
 {% block meta_description %}{% trans 'Get in touch with Dr. Hossein Rabbani DDS, your trusted cosmetic dentist. Book an appointment for a smile makeover, teeth whitening, veneers, and more. Contact us today!' %} {% endblock %}
 {% block content %}
 
     <!-- Hero Section -->
-	<section id="hero" class="hero ftco-section">
-		<!-- Image for desktops and larger screens -->
-		<img src="{% static 'website/images/hero-bg-desktop.png' %}" alt="" data-aos="fade-in" class="desktop">
-		<!-- Image for mobile and smaller screens -->
-		<img src="{% static 'website/images/hero-bg-mobile.png' %}" alt="" data-aos="fade-in" class="mobile">
-	
-		<div class="container" data-aos="fade-up" data-aos-delay="100">
-		  <div class="row align-items-center justify-content-start" style="flex-direction: column;">
-			<div class="col-md-12 col-sm-12 ftco-animate">
-			  <h2 class="text-center  ">{% trans "Contact" %}</h2>
-			</div>
-		  </div>
-		</div>
-	  </section><!-- /Hero Section -->
-		
-    {% if message_name %}
-      {% if request.session.mail_sent %}
-        <center class="col-md-12 p-md-4">
-          <h2>{% trans 'Message Failed' %}</h2>
-          <p>{% trans 'We have already received your message! In case of emergency, use other approaches to send us your message.' %}</p>
-        </center>
-      {% else %}
-        <center class="col-md-12 p-md-4">
-          <h2>{% trans 'Thanks' %} {{ message_name }}!</h2>
-          <p>{% trans 'We received your email and will respond shortly' %}</p>
-        </center>
-      {% endif %}
-    {% else %}
-      <section class="ftco-section contact-section ftco-degree-bg">
-        <div class="container">
-          <div class="row d-flex mb-5 contact-info">
-            <div class="col-md-12 mb-4">
-              <h2 class="h4">{% trans 'Contact Information' %}</h2>
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url({% static 'website/images/hero-bg-desktop.png' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+          <div class="row slider-text align-items-end">
+            <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+              <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">{% trans 'Contact' %}</h1>
             </div>
-            <div class="w-100"></div>
-
-            <div class="col-md-3">
-              <p><span>{% trans 'Address:' %} </span><a>{% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}</a></p>
-            </div>
-            <div class="col-md-3">
-              <p><span>{% trans 'Phone:' %} </span> <a href="tel:{{dr_phone}}">{% trans '+989033103516' %}</a></p>
-            </div>
-            <!-- <div class="col-md-3">
-              <p><span>{% trans 'Email:' %} </span> <a href="mailto:{{dr_email}}">{{dr_email}}</a></p>
-            </div> -->
-            <div class="col-md-3">
-              <p><span>{% trans 'Instagram' %}</span> <a href={{dr_instagram}}>{% trans 'Dr. Hossein Rabbani' %}</a></p>
-              <p><span>{% trans 'Instagram' %}</span> <a href={{clinic_instagram}}>{% trans 'Harp Clinic' %}</a></p>
-            </div>
-          </div>
-          <div dir="{% trans 'dir' %}" class="row block-9">
-              <div class="col-md-6 pr-md-5">
-                <form action="{% url 'contact' %}" method="post">
-                  {% csrf_token %}
-                  <div class="form-group">
-                    <input type="text" name="message-name" class="form-control" placeholder="{% trans 'Your Name' %}">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="message-email" class="form-control" placeholder="{% trans 'Your Email' %}">
-                  </div>
-                  <div class="form-group">
-                    <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="{% trans 'Message' %}"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="{% trans 'Send' %}" class="btn read-more mb-5">
-                  </div>
-                </form>
-              
-              </div>
-
-              <div class="map-container col-md-6" id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7556283202666!2d48.678617775509565!3d31.338121274297905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc3df59f60eb783%3A0xff18af503b556ec4!2sJaam-e-Jam%20Medical%20Center!5e0!3m2!1sen!2s!4v1717858284595!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
           </div>
         </div>
-      </section>
-    {% endif %}
+      </div>
+    </section>
+    <!-- END Hero Section -->
 
+    {% if message_name %}
+      {% if request.session.mail_sent %}
+        <!-- Error State -->
+        <div class="contact-message contact-message--error">
+          <div class="contact-message__icon">!</div>
+          <h2 class="contact-message__title">{% trans 'Message Failed' %}</h2>
+          <p class="contact-message__text">{% trans 'We have already received your message! In case of emergency, use other approaches to send us your message.' %}</p>
+        </div>
+      {% else %}
+        <!-- Success State -->
+        <div class="contact-message contact-message--success">
+          <div class="contact-message__icon">&#10003;</div>
+          <h2 class="contact-message__title">{% trans 'Thanks' %}, {{ message_name }}!</h2>
+          <p class="contact-message__text">{% trans 'We received your email and will respond shortly' %}</p>
+        </div>
+      {% endif %}
+    {% else %}
+
+    <section class="contact-section" dir="{% trans 'dir' %}">
+      <div class="contact-container">
+
+        <!-- Two Column Layout -->
+        <div class="contact-grid">
+
+          <!-- Left Column: Contact Information -->
+          <div class="contact-info">
+
+            <div class="contact-info__block">
+              <span class="contact-info__label">{% trans 'Address:' %}</span>
+              <address class="contact-info__value">
+                {% trans 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran' %}
+              </address>
+            </div>
+
+            <div class="contact-info__block">
+              <span class="contact-info__label">{% trans 'Phone:' %}</span>
+              <a href="tel:{{dr_phone}}" class="contact-info__value contact-info__link">
+                {% trans '+989033103516' %}
+              </a>
+            </div>
+
+            <div class="contact-info__block">
+              <span class="contact-info__label">{% trans 'Instagram' %}</span>
+              <div class="contact-info__social">
+                <a href="{{dr_instagram}}" class="contact-info__value contact-info__link" target="_blank" rel="noopener">
+                  @dr.hossein.rabbani
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info__divider"></div>
+
+            <div class="contact-info__hours">
+              <span class="contact-info__label">{% trans 'Working Hours' %}</span>
+              <p class="contact-info__value">
+                {% trans 'Saturday - Thursday' %}<br>
+                9:00 - 21:00
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-form-wrapper">
+            <form action="{% url 'contact' %}" method="post" class="contact-form">
+              {% csrf_token %}
+
+              <div class="contact-form__group">
+                <label for="contact-name" class="contact-form__label">{% trans 'Your Name' %}</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="message-name"
+                  class="contact-form__input"
+                  placeholder="{% trans 'Full Name' %}"
+                  required
+                  autocomplete="name"
+                >
+              </div>
+
+              <div class="contact-form__group">
+                <label for="contact-email" class="contact-form__label">{% trans 'Your Email' %}</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="message-email"
+                  class="contact-form__input"
+                  placeholder="example@email.com"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+
+              <div class="contact-form__group">
+                <label for="contact-message" class="contact-form__label">{% trans 'Message' %}</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="contact-form__textarea"
+                  placeholder="{% trans 'How can we help you?' %}"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="contact-form__submit">
+                {% trans 'Send Message' %}
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
 
 {% endblock %}

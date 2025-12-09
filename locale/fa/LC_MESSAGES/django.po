@@ -350,6 +350,22 @@ msgstr "آدرس الکترونیک"
 msgid "Send"
 msgstr "ارسال"
 
+#: .\website\templates\contact.html
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+#: .\website\templates\contact.html
+msgid "How can we help you?"
+msgstr "چگونه می‌توانیم کمکتان کنیم؟"
+
+#: .\website\templates\contact.html
+msgid "Working Hours"
+msgstr "ساعات کاری"
+
+#: .\website\templates\contact.html
+msgid "Saturday - Thursday"
+msgstr "شنبه - پنجشنبه"
+
 #: .\website\templates\courses.html:4
 msgid "Courses Dr. Rabbani"
 msgstr "دوره‌های دندانپزشکی"

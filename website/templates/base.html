@@ -42,7 +42,7 @@
     <link rel="stylesheet" href=" {% static 'website/css/icomoon.css' %} ">
   </head>
 
-  <body style="text-align: {% trans 'text-align' %};">
+  <body class="{% block body_class %}{% endblock %}" style="text-align: {% trans 'text-align' %};">
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
