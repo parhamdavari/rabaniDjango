@@ -40,8 +40,8 @@ from website.models import SlideShowImage, PatientImage, GalleryImage, Course
 # Configuration
 OUTPUT_DIR = 'dist'
 CUSTOM_DOMAIN = 'drrabani.com'
-LANGUAGES = ['en', 'fa', 'ar']
-DEFAULT_LANGUAGE = 'en'
+LANGUAGES = ['en', 'fa']
+DEFAULT_LANGUAGE = 'fa'
 # Base URL for GitHub Pages project site (empty string for custom domain)
 # When using custom domain (drrabani.com), BASE_URL should be empty
 # When using github.io subdirectory, BASE_URL should be '/rabaniDjango'
@@ -121,6 +121,7 @@ def generate_pages():
         # Home page
         context = {
             **base_context,
+            'PAGE_NAME': 'home',
             'slideshow_images': slideshow_images,
             'patient_images': patient_images,
             'gallery_images': gallery_images,
@@ -138,8 +139,9 @@ def generate_pages():
             print(f'  Error generating home: {e}')
 
         # About page
+        context = {**base_context, 'PAGE_NAME': 'about'}
         try:
-            html = render_template('templates_static/about.html', base_context, lang)
+            html = render_template('templates_static/about.html', context, lang)
             with open(os.path.join(lang_dir, 'about.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
             print(f'  Generated: {lang}/about.html')
@@ -147,8 +149,9 @@ def generate_pages():
             print(f'  Error generating about: {e}')
 
         # Contact page
+        context = {**base_context, 'PAGE_NAME': 'contact'}
         try:
-            html = render_template('templates_static/contact.html', base_context, lang)
+            html = render_template('templates_static/contact.html', context, lang)
             with open(os.path.join(lang_dir, 'contact.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
             print(f'  Generated: {lang}/contact.html')
@@ -158,6 +161,7 @@ def generate_pages():
         # Courses page
         context = {
             **base_context,
+            'PAGE_NAME': 'courses',
             'courses': courses,
         }
         try:
@@ -169,8 +173,9 @@ def generate_pages():
             print(f'  Error generating courses: {e}')
 
         # Appointment page
+        context = {**base_context, 'PAGE_NAME': 'appointment'}
         try:
-            html = render_template('templates_static/appointment.html', base_context, lang)
+            html = render_template('templates_static/appointment.html', context, lang)
             with open(os.path.join(lang_dir, 'appointment.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
             print(f'  Generated: {lang}/appointment.html')
