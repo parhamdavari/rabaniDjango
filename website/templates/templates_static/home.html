@@ -1,5 +1,4 @@
 {% extends 'templates_static/base.html' %}
-{% load static %}
 {% load i18n %}
 {% block content %}
 
@@ -26,7 +25,7 @@
     {% endfor %}
 
 
-    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_2.jpg' %} ');">
+    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url('{{ BASE_URL }}/static/website/images/bg_2.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text align-items-center" data-scrollax-parent="true">
@@ -40,7 +39,7 @@
       </div>
     </div>
 
-    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_3.jpg' %} ');">
+    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url('{{ BASE_URL }}/static/website/images/bg_3.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text align-items-center" data-scrollax-parent="true">
@@ -54,7 +53,7 @@
 
 
 
-    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url(' {% static 'website/images/bg_1.heic' %} ');">
+    <div dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}" class="slider-item" style="background-image: url('{{ BASE_URL }}/static/website/images/bg_1.heic');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text align-items-center" data-scrollax-parent="true">
@@ -205,7 +204,7 @@
   <section class="ftco-section ftco-services">
     <div class="container-wrap mt-5">
       <div class="row d-flex no-gutters">
-        <div class="col-md-6 img" style="background-image: url({% static 'website/images/clinic.jfif' %}); min-height:400px;">
+        <div class="col-md-6 img" style="background-image: url({{ BASE_URL }}/static/website/images/clinic.jfif); min-height:400px;">
         </div>
         <div class="col-md-6 d-flex">
           <div class="about-wrap">

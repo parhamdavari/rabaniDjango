@@ -1,17 +1,15 @@
 {% extends 'templates_static/base.html' %}
-{% load static %}
 {% load i18n %}
 {% block title %}{% trans 'About Dr. Rabbani' %} {% endblock %}
 {% block meta_description %} {% trans 'Learn more about Dr. Hossein Rabbani DDS, a renowned cosmetic dentist. Discover his expertise in smile makeovers, teeth whitening, veneers, and his commitment to patient care.' %} {% endblock %}
 
 {% block content %}
     <section class="home-slider owl-carousel">
-      <div class="slider-item bread-item" style="background-image: url(' {% static 'website/images/about.jpg' %} ');" data-stellar-background-ratio="0.5">
+      <div class="slider-item bread-item" style="background-image: url('{{ BASE_URL }}/static/website/images/about.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container" data-scrollax-parent="true">
           <div class="row slider-text align-items-end">
             <div class="col-md-7 col-sm-12 ftco-animate mb-5">
-              <!-- <p class="breadcrumbs" data-scrollax=" properties: { translateY: '70%', opacity: 1.6}"><span class="mr-2"><a href=" {% static 'about.html/index.html' %} ">Home</a></span> <span>About</span></p> -->
               <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">{% trans 'About' %}</h1>
             </div>
           </div>
@@ -24,12 +22,11 @@
   <section class="ftco-section ftco-services">
     <div class="container-wrap mt-5">
       <div class="row d-flex no-gutters">
-        <div class="col-md-6 img" style="background-image: url({% static 'website/images/about_1.png' %}); min-height:400px;"></div>
+        <div class="col-md-6 img" style="background-image: url({{ BASE_URL }}/static/website/images/about_1.png); min-height:400px;"></div>
         <div class="col-md-6 d-flex">
           <div class="about-wrap">
             <div class="list-services d-flex ftco-animate">
               <div class="text">
-                <!-- <h3>{% trans 'Well Experience Dentist' %}</h3> -->
                 <p class="">{% trans 'Dr. Hossein Rabbani Khah is a distinguished cosmetic dentist who completed his dental studies at the prestigious Jondy Shahpour University of Ahvaz. With a deep passion for enhancing smiles, Dr. Rabbani Khah has dedicated his career to the art and science of cosmetic dentistry, with a particular focus on veneer composites. At the helm of Harp Dental Clinic, he leads a team committed to providing exceptional dental care. His expertise in veneer composites allows patients to achieve the perfect balance between aesthetics and functionality, ensuring that each smile is both beautiful and healthy. Dr. Rabbani Khah meticulous approach and dedication to his craft have established him as a trusted name in cosmetic dentistry.' %}</p>
               </div>
             </div>

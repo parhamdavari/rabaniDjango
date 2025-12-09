@@ -42,6 +42,8 @@ OUTPUT_DIR = 'dist'
 CUSTOM_DOMAIN = 'drrabani.com'
 LANGUAGES = ['en', 'fa', 'ar']
 DEFAULT_LANGUAGE = 'en'
+# Base URL for GitHub Pages project site (empty string for custom domain or user site)
+BASE_URL = os.environ.get('BASE_URL', '/rabaniDjango')
 
 
 def clean_output():
@@ -62,6 +64,7 @@ def get_base_context():
         'clinic_addr': 'Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, Iran',
         'welcome_msg': 'Follow us on social media for updates, personalized care, and to make reservation!',
         'GA_KEY': os.environ.get('GOOGLE_ANALYTICS_KEY', ''),
+        'BASE_URL': BASE_URL,
     }
 
 
@@ -213,24 +216,25 @@ def create_github_pages_files():
     # print(f'  Created CNAME ({CUSTOM_DOMAIN})')
 
     # Root index.html - redirect to default language
+    redirect_url = f'{BASE_URL}/{DEFAULT_LANGUAGE}/'
     redirect_html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=/{DEFAULT_LANGUAGE}/">
+    <meta http-equiv="refresh" content="0; url={redirect_url}">
     <link rel="canonical" href="https://{CUSTOM_DOMAIN}/{DEFAULT_LANGUAGE}/">
-    <script>window.location.href = '/{DEFAULT_LANGUAGE}/';</script>
+    <script>window.location.href = '{redirect_url}';</script>
     <title>Redirecting to Dr. Rabbani's Website</title>
 </head>
 <body>
-    <p>Redirecting to <a href="/{DEFAULT_LANGUAGE}/">Dr. Rabbani's Website</a>...</p>
+    <p>Redirecting to <a href="{redirect_url}">Dr. Rabbani's Website</a>...</p>
 </body>
 </html>'''
 
     index_path = os.path.join(OUTPUT_DIR, 'index.html')
     with open(index_path, 'w') as f:
         f.write(redirect_html)
-    print(f'  Created root index.html (redirects to /{DEFAULT_LANGUAGE}/)')
+    print(f'  Created root index.html (redirects to {redirect_url})')
 
 
 def create_404_page():
@@ -277,7 +281,7 @@ def create_404_page():
     <div class="container">
         <h1>404</h1>
         <p>Page not found</p>
-        <p><a href="/{DEFAULT_LANGUAGE}/">Go to Homepage</a></p>
+        <p><a href="{BASE_URL}/{DEFAULT_LANGUAGE}/">Go to Homepage</a></p>
     </div>
 </body>
 </html>'''
