@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__
 *.py[cod]
 *$py.class
 *.pyc
@@ -17,7 +18,6 @@ env/
 db.sqlite3
 *.sqlite3
 staticfiles/
-media/
 
 # Static site build output
 dist/

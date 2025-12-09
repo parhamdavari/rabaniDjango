@@ -11,15 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Create SSH key
+        run: |
+          env
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p 22 ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          sudo apt-get install sshpass
 
       - name: SSH into Server and Deploy
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-          "cd ${{ secrets.WORK_DIR }} && \
-          git fetch origin prod && \
-          git reset --hard origin/prod && \
-          ./scripts/deploy.sh"
+          sshpass -p '${{ secrets.PSWD }}' ssh -v -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} <<'ENDSSH'
+          cd ${{ secrets.WORK_DIR }}
+          git stash
+          git pull origin prod
+          sudo git reset --hard origin/prod
+          ./scripts/deploy.sh

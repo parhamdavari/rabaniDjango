@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 20:48+0330\n"
+"POT-Creation-Date: 2024-08-14 12:20+0330\n"
 "PO-Revision-Date: 2024-06-23 22:01+0000\n"
 "Last-Translator:   <plavigne19@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\rabani\settings.py:119
+#: .\rabani\settings.py:131
 msgid "English"
 msgstr ""
 
-#: .\rabani\settings.py:120
+#: .\rabani\settings.py:132
 msgid "Persian"
 msgstr ""
 
-#: .\rabani\settings.py:121
+#: .\rabani\settings.py:133
 msgid "Arabic"
 msgstr ""
 
@@ -54,11 +54,15 @@ msgid ""
 "commitment to patient care."
 msgstr ""
 
-#: .\website\templates\about.html:15 .\website\templates\base.html:48
+#: .\website\templates\about.html:15 .\website\templates\base.html:70
 msgid "About"
 msgstr ""
 
-#: .\website\templates\about.html:29
+#: .\website\templates\about.html:33 .\website\templates\home.html:290
+msgid "Well Experience Dentist"
+msgstr ""
+
+#: .\website\templates\about.html:34 .\website\templates\about.html:50
 msgid ""
 "Dr. Hossein Rabbani Khah is a distinguished cosmetic dentist who completed "
 "his dental studies at the prestigious Jondy Shahpour University of Ahvaz. "
@@ -81,7 +85,7 @@ msgid ""
 "Book an appointment for a smile makeover, teeth whitening, veneers, and more."
 msgstr ""
 
-#: .\website\templates\appointment.html:14 .\website\templates\contact.html:14
+#: .\website\templates\appointment.html:14
 msgid "Contact Us"
 msgstr ""
 
@@ -119,98 +123,119 @@ msgid ""
 "telephone to confirm your appointment."
 msgstr ""
 
-#: .\website\templates\base.html:8
+#: .\website\templates\base.html:17
 msgid "Dr. Hossein Rabbani DDS"
 msgstr ""
 
-#: .\website\templates\base.html:9
+#: .\website\templates\base.html:18
 msgid ""
 "Experience superior dental care with Dr. Hossein Rabbani DDS, a leading "
 "cosmetic dentist. Specializing in smile makeovers, teeth whitening, veneers, "
 "and more. Transform your smile today!"
 msgstr ""
 
-#: .\website\templates\base.html:35
+#: .\website\templates\base.html:54
 msgid "text-align"
 msgstr ""
 
-#: .\website\templates\base.html:39
+#: .\website\templates\base.html:59
 msgid "Dr. Rabbani"
 msgstr ""
 
-#: .\website\templates\base.html:41
-msgid "Menu"
-msgstr ""
-
-#: .\website\templates\base.html:46
+#: .\website\templates\base.html:68
 msgid "Home"
 msgstr ""
 
-#: .\website\templates\base.html:47 .\website\templates\courses.html:16
+#: .\website\templates\base.html:69
 msgid "Courses"
 msgstr ""
 
-#: .\website\templates\base.html:50
+#: .\website\templates\base.html:72 .\website\templates\contact.html:18
 msgid "Contact"
 msgstr ""
 
-#: .\website\templates\base.html:51 .\website\templates\base.html:119
-#: .\website\templates\base.html:160
+#: .\website\templates\base.html:73 .\website\templates\base.html:158
 msgid "Make an Appointment"
 msgstr ""
 
-#: .\website\templates\base.html:68
-msgid "Social Media"
+#: .\website\templates\base.html:93
+msgid "Connect"
 msgstr ""
 
-#: .\website\templates\base.html:81
-msgid "Office"
-msgstr ""
+#: .\website\templates\base.html:95 .\website\templates\base.html:109
+#: .\website\templates\base.html:151 .\website\templates\base.html:154
+#: .\website\templates\base.html:157 .\website\templates\contact.html:59
+msgid "dir"
+msgstr "ltr"
 
-#: .\website\templates\base.html:84 .\website\templates\contact.html:43
+#: .\website\templates\base.html:96 .\website\templates\contact.html:46
 msgid ""
 "Unit 1, 8th Floor, Jaam-e-Jam Complex, East Pahlavan St., Ahvaz, Khuzestan, "
 "Iran"
 msgstr ""
 
-#: .\website\templates\base.html:85 .\website\templates\contact.html:46
+#: .\website\templates\base.html:97 .\website\templates\contact.html:49
 msgid "+989033103516"
 msgstr ""
 
-#: .\website\templates\base.html:93
-msgid "Location"
+#: .\website\templates\base.html:106
+msgid "Services"
 msgstr ""
 
-#: .\website\templates\base.html:129
+#: .\website\templates\base.html:110 .\website\templates\courses.html:19
+msgid "Hands-on Courses"
+msgstr ""
+
+#: .\website\templates\base.html:111 .\website\templates\home.html:113
+msgid "Smile Makeovers"
+msgstr ""
+
+#: .\website\templates\base.html:112
+msgid "Veneers & Ceramic"
+msgstr ""
+
+#: .\website\templates\base.html:113 .\website\templates\home.html:101
+msgid "Restorative Dentistry"
+msgstr ""
+
+#: .\website\templates\base.html:124
+msgid "Social Media"
+msgstr ""
+
+#: .\website\templates\base.html:168
 msgid "Full Name"
 msgstr ""
 
-#: .\website\templates\base.html:133
+#: .\website\templates\base.html:172
 msgid "Email"
 msgstr ""
 
-#: .\website\templates\base.html:139
+#: .\website\templates\base.html:178
 msgid "Date"
 msgstr ""
 
-#: .\website\templates\base.html:145
+#: .\website\templates\base.html:184
 msgid "Appointment Time"
 msgstr ""
 
-#: .\website\templates\base.html:146
+#: .\website\templates\base.html:185
 msgid "9 to 12"
 msgstr ""
 
-#: .\website\templates\base.html:147
+#: .\website\templates\base.html:186
 msgid "15 to 18"
 msgstr ""
 
-#: .\website\templates\base.html:148
+#: .\website\templates\base.html:187
 msgid "18 to 21"
 msgstr ""
 
-#: .\website\templates\base.html:157 .\website\templates\contact.html:67
+#: .\website\templates\base.html:196 .\website\templates\contact.html:70
 msgid "Message"
+msgstr ""
+
+#: .\website\templates\base.html:199
+msgid "BOOK"
 msgstr ""
 
 #: .\website\templates\contact.html:4
@@ -224,65 +249,61 @@ msgid ""
 "more. Contact us today!"
 msgstr ""
 
-#: .\website\templates\contact.html:24
+#: .\website\templates\contact.html:27
 msgid "Message Failed"
 msgstr ""
 
-#: .\website\templates\contact.html:25
+#: .\website\templates\contact.html:28
 msgid ""
 "We have already received your message! In case of emergency, use other "
 "approaches to send us your message."
 msgstr ""
 
-#: .\website\templates\contact.html:29
+#: .\website\templates\contact.html:32
 msgid "Thanks"
 msgstr ""
 
-#: .\website\templates\contact.html:30
+#: .\website\templates\contact.html:33
 msgid "We received your email and will respond shortly"
 msgstr ""
 
-#: .\website\templates\contact.html:38
+#: .\website\templates\contact.html:41
 msgid "Contact Information"
 msgstr ""
 
-#: .\website\templates\contact.html:43
+#: .\website\templates\contact.html:46
 msgid "Address:"
 msgstr ""
 
-#: .\website\templates\contact.html:46
+#: .\website\templates\contact.html:49
 msgid "Phone:"
 msgstr ""
 
-#: .\website\templates\contact.html:49
+#: .\website\templates\contact.html:52
 msgid "Email:"
 msgstr ""
 
-#: .\website\templates\contact.html:52 .\website\templates\contact.html:53
+#: .\website\templates\contact.html:55 .\website\templates\contact.html:56
 msgid "Instagram"
 msgstr ""
 
-#: .\website\templates\contact.html:52
+#: .\website\templates\contact.html:55 .\website\templates\home.html:50
 msgid "Dr. Hossein Rabbani"
 msgstr ""
 
-#: .\website\templates\contact.html:53
+#: .\website\templates\contact.html:56 .\website\templates\home.html:282
 msgid "Harp Clinic"
 msgstr ""
 
-#: .\website\templates\contact.html:56
-msgid "dir"
-msgstr "ltr"
-
-#: .\website\templates\contact.html:61
+#: .\website\templates\contact.html:64
 msgid "Your Name"
 msgstr ""
 
-#: .\website\templates\contact.html:64
+#: .\website\templates\contact.html:67
 msgid "Your Email"
 msgstr ""
 
-#: .\website\templates\contact.html:70
+#: .\website\templates\contact.html:73
 msgid "Send"
 msgstr ""
 
@@ -297,140 +318,121 @@ msgid ""
 "Technique."
 msgstr ""
 
-#: .\website\templates\home.html:34
-msgid "Where Art Meets Dentistry"
+#: .\website\templates\home.html:19
+msgid "Today<br>Is the Day<br>To protect your Smile"
 msgstr ""
 
-#: .\website\templates\home.html:35
+#: .\website\templates\home.html:22
+msgid "Book"
+msgstr ""
+
+#: .\website\templates\home.html:23
+msgid "or Call (+98) 903-310-3516"
+msgstr ""
+
+#: .\website\templates\home.html:52
 msgid ""
-"With a blend of precision and artistic flair, we create smiles that are "
-"uniquely tailored to each patient."
+"Dr. Hossein Rabbani Khah is an esteemed cosmetic dentist who graduated from "
+"the renowned Jondy Shahpour University of Ahvaz. Driven by a passion for "
+"enhancing smiles, he has devoted his career to excelling in cosmetic "
+"dentistry, particularly in the area of veneer composites."
 msgstr ""
 
-#: .\website\templates\home.html:36 .\website\templates\home.html:192
-msgid "Request Appointment"
-msgstr ""
-
-#: .\website\templates\home.html:37
-msgid "OR CALL (+98) 903-310-3516"
-msgstr ""
-
-#: .\website\templates\home.html:48
-msgid "Visit Online"
-msgstr ""
-
-#: .\website\templates\home.html:49
+#: .\website\templates\home.html:55
 msgid ""
-"We offer <strong>FREE</strong> virtual appointments for personalized medical "
-"advice and diagnostics."
-msgstr ""
-
-#: .\website\templates\home.html:62
-msgid "Hands-on Courses"
-msgstr ""
-
-#: .\website\templates\home.html:63
-msgid ""
-"Enroll in Dr. Rabani’s immersive hands-on courses and elevate your practice. "
-"Learn the art of crafting stunning smiles from an expert."
-msgstr ""
-
-#: .\website\templates\home.html:64
-msgid "Learn More"
+"His expertise in veneer composites ensures that patients achieve the ideal "
+"blend of aesthetics and functionality, guaranteeing that every smile is both "
+"stunning and healthy. His meticulous attention to detail and dedication to "
+"his profession have made him a respected figure in the field of cosmetic "
+"dentistry."
 msgstr ""
 
 #: .\website\templates\home.html:75
-msgid "Our Service Keeps you Smile"
+msgid "Our Services<br>Your Smile"
 msgstr ""
 
-#: .\website\templates\home.html:85
-msgid "Teeth Whitening"
+#: .\website\templates\home.html:89
+msgid "Composite & Ceramic"
 msgstr ""
 
-#: .\website\templates\home.html:86
+#: .\website\templates\home.html:91
 msgid ""
-"A cosmetic procedure that lightens the color of teeth, often using bleaching "
-"agents or whitening products."
+"Composite veneers are quick, affordable resin shells applied to teeth, while "
+"ceramic veneers are durable, custom-made ceramic shells for a natural look."
 msgstr ""
 
-#: .\website\templates\home.html:96
-msgid "Cosmetic Dentistry"
-msgstr ""
-
-#: .\website\templates\home.html:97
-msgid "Focuses on enhancing the appearance of teeth and gums."
-msgstr ""
-
-#: .\website\templates\home.html:107
-msgid "Composite Veneers"
-msgstr ""
-
-#: .\website\templates\home.html:108
+#: .\website\templates\home.html:103
 msgid ""
-"Thin shells made of tooth-colored resin applied directly to teeth. Used to "
-"cover imperfections, improve shape, and enhance smile aesthetics."
+"Procedures like fillings, crowns, bridges, and dentures to repair and "
+"replace teeth."
 msgstr ""
 
-#: .\website\templates\home.html:118
-msgid "Smile Makeover"
-msgstr ""
-
-#: .\website\templates\home.html:119
+#: .\website\templates\home.html:115
 msgid ""
 "A comprehensive approach combining cosmetic dentistry procedures to achieve "
 "desired smile transformation."
 msgstr ""
 
-#: .\website\templates\home.html:131
-msgid "Hollywood Smile"
+#: .\website\templates\home.html:125
+msgid "Teeth Whitening"
 msgstr ""
 
-#: .\website\templates\home.html:159
-msgid "With Dr.Rabani "
+#: .\website\templates\home.html:127
+msgid ""
+"A cosmetic procedure that lightens the color of teeth, often using bleaching "
+"agents or whitening products."
 msgstr ""
 
-#: .\website\templates\home.html:189
-msgid "SCHEDULE YOUR RESERVATION NOW!"
+#: .\website\templates\home.html:148
+msgid "Your Smile..."
 msgstr ""
 
-#: .\website\templates\home.html:193
-msgid "CALL (+98) 903-310-3516"
+#: .\website\templates\home.html:155
+msgid "Your Beautiful <br>Smile"
 msgstr ""
 
-#: .\website\templates\home.html:213
-msgid "Meet Me at Harp Clinic"
+#: .\website\templates\home.html:156
+msgid "Transformative Perfection: Detailed Craftsmanship in Composite Veneers"
 msgstr ""
 
-#: .\website\templates\home.html:214
+#: .\website\templates\home.html:270
+msgid "Meet Me at <br>Harp"
+msgstr ""
+
+#: .\website\templates\home.html:283
 msgid "The clinic is located in Jaam-E-Jam complex at east Pahlavan street."
 msgstr ""
 
-#: .\website\templates\home.html:221
-msgid "Well Experience Dentist"
-msgstr ""
-
-#: .\website\templates\home.html:222
+#: .\website\templates\home.html:291
 msgid ""
 "Our clinic boasts a team of dentists with extensive experience in delivering "
 "top-notch dental care."
 msgstr ""
 
-#: .\website\templates\home.html:230
+#: .\website\templates\home.html:299
 msgid "High Technology Facilities"
 msgstr ""
 
-#: .\website\templates\home.html:231
+#: .\website\templates\home.html:300
 msgid ""
 "We utilize the latest dental technology to ensure precise diagnoses and "
 "effective treatments."
 msgstr ""
 
-#: .\website\templates\home.html:239
+#: .\website\templates\home.html:308
 msgid "Comfortable Clinic"
 msgstr ""
 
-#: .\website\templates\home.html:240
+#: .\website\templates\home.html:309
 msgid ""
 "Patients enjoy a relaxing atmosphere with comfortable amenities designed to "
 "ease dental anxiety."
+msgstr ""
+
+#: .\website\templates\home.html:323
+msgid "Your Smile<br>Our Solidity"
+msgstr ""
+
+#: .\website\templates\home.html:324
+msgid "Radiant Results: Showcasing Complete Smile Transformations"
 msgstr ""

@@ -41,7 +41,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['5.34.194.162', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['188.121.123.56', 'www.drrabani.com', 'drrabani.com', '5.34.194.162', '192.168.236.142', '192.168.1.50', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'rosetta',
     'parler',
 ]
 
@@ -74,7 +73,7 @@ ROOT_URLCONF = 'rabani.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'website', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,8 +97,12 @@ WSGI_APPLICATION = 'rabani.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),
     }
 }
 
@@ -169,9 +172,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 
 # Base url to serve media files
 MEDIA_URL = '/media/'
@@ -195,7 +201,7 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-SESSION_COOKIE_AGE = 300  # Expire session after 300 seconds or 5 minutes
+SESSION_COOKIE_AGE = 3000  # Expire session after 300 seconds or 5 minutes
 
 GOOGLE_ANALYTICS_KEY = env('GOOGLE_ANALYTICS_KEY')
 

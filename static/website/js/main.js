@@ -19,6 +19,36 @@
   });
 
 
+	const mediaQuery = window.matchMedia('(max-width: 991.98px)');
+	const navbar = document.querySelector('.ftco-navbar-light');
+	const toggler = document.querySelector('.navbar-toggler');
+
+	function handleMediaQueryChange(e) {
+		if (e.matches) {
+			// Media query matches (max-width: 991.98px)
+			toggler.addEventListener('click', function() {
+				navbar.classList.toggle('active');
+			});
+		} else {
+			// Media query does not match
+			toggler.removeEventListener('click', function() {
+				navbar.classList.toggle('active');
+			});
+			navbar.classList.remove('active'); // Ensure navbar is reset when media query does not match
+		}
+	}
+
+	const lightbox = GLightbox({
+		selector: '.glightbox'
+	});
+
+	
+	// Initial check
+	handleMediaQueryChange(mediaQuery);
+
+	// Listen for changes in the media query
+	mediaQuery.addListener(handleMediaQueryChange);
+
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
@@ -280,7 +310,7 @@
 	  'format': 'm/d/yyyy',
 	  'autoclose': true
 	});
-	$('.appointment_time').timepicker();
+	// $('.appointment_time').timepicker();
 
 
 
