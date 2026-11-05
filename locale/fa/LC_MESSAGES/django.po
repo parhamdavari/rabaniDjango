@@ -606,11 +606,3 @@ msgstr "بیشتر"
 
 #~ msgid "CALL"
 #~ msgstr "تماس"
-
-#: .\website\templates\templates_static\base.html:133
-msgid "Copyright"
-msgstr "کپی‌رایت"
-
-#: .\website\templates\templates_static\base.html:133
-msgid "All rights reserved"
-msgstr "تمامی حقوق محفوظ است"

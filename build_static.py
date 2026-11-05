@@ -23,6 +23,7 @@ Output:
 import os
 import sys
 import shutil
+import datetime
 
 # Set environment for static build BEFORE importing Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rabani.settings')
@@ -56,9 +57,20 @@ def clean_output():
     print(f'Created output directory: {OUTPUT_DIR}/')
 
 
+def persian_year():
+    """Approximate Solar Hijri year in Persian digits, as a fallback for the footer.
+
+    The browser replaces it with the exact year; Nowruz falls on March 20 or 21.
+    """
+    today = datetime.date.today()
+    year = today.year - (621 if (today.month, today.day) >= (3, 21) else 622)
+    return str(year).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))
+
+
 def get_base_context():
     """Get common context variables used across all templates."""
     return {
+        'PERSIAN_YEAR': persian_year(),
         'dr_email': 'parham.davarii@gmail.com',
         'dr_phone': '+989033103516',
         'dr_instagram': 'https://www.instagram.com/dr.hossein.rabbani/',
