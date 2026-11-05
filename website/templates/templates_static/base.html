@@ -131,7 +131,7 @@
         <div class="col-md-12 text-center">
           <img src="{{ BASE_URL }}/static/website/images/logo-harp.png" class="img-fluid mb-5" alt="">
           {% if LANGUAGE_CODE == 'fa' %}
-          <p>&copy; <span id="copyright-year">{{ PERSIAN_YEAR }}</span> تمامی حقوق این وبسایت برای دکتر حسین ربانی‌خواه محفوظ است</p>
+          <p>&copy; <span id="copyright-year">{{ PERSIAN_YEAR }}</span> تمامی حقوق محفوظ است</p>
           <script>(function () { var y = new Intl.DateTimeFormat('fa-IR-u-ca-persian', {year: 'numeric'}).format(new Date()).replace(/[^۰-۹]/g, ''); if (y) document.getElementById('copyright-year').textContent = y; })();</script>
           {% else %}
           <p>Copyright &copy; <span id="copyright-year">{% now "Y" %}</span> All rights reserved</p>
